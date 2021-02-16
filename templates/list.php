@@ -1,5 +1,14 @@
 <?php
-/*Post/Page List Shortcode 
+/*
+ * List template.
+ *
+ * This template can be overriden by copying this file to your-theme/bs5-post-page-grid-list/list.php
+ *
+ * @author 		Bastian Kreiter
+ * @package 	bS5 Post/Page Grid/List
+ * @version     1.0.0
+
+Post/Page List Shortcode 
 Posts: [bs-post-list type="post" category="documentation, category-default" order="DESC" orderby="date" posts="6"]
 Pages: [bs-post-list type="page" post_parent="413" order="DESC" orderby="date"]
 */

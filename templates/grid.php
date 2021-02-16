@@ -1,5 +1,14 @@
 <?php
-/*Post/Page Grid Shortcode 
+/*
+ * Grid template.
+ *
+ * This template can be overriden by copying this file to your-theme/bs5-post-page-grid-list/grid.php
+ *
+ * @author 		Bastian Kreiter
+ * @package 	bS5 Post/Page Grid/List
+ * @version     1.0.0
+
+Post/Page Grid Shortcode 
 Posts: [bs-post-grid type="post" category="documentation, category-default" order="ASC" orderby="title" posts="6"]
 Pages: [bs-post-grid type="page" post_parent="413" order="ASC" orderby="title" posts="6"]
 */

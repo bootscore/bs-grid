@@ -3,7 +3,7 @@
 Contributors: craftwerk
 
 Requires at least: 4.5
-Tested up to: 5.6.1
+Tested up to: 5.6.2
 Requires PHP: 5.6
 Stable tag: 5.0.0.1
 License: GNU General Public License v2 or later
@@ -56,6 +56,6 @@ posts: number of pages to display
     
         * [NEW] Override templates in child-theme 
 
-    = 5.0.0 - May 04 2020 =
+    = 5.0.0.0 - February 02 2021 =
     
         * Initial release

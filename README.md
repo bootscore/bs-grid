@@ -1,6 +1,6 @@
 # bS Grid
 
-WordPress plugin to show posts, child-pages, custom post types or WooCommerce products in a swiper.js carousel in bootScore theme.
+WordPress plugin to show posts, child-pages or custom post types in grid or list cards in bootScore theme.
 
 Demo: https://bootscore.me/plugins/bs-grid/
 

@@ -2,7 +2,7 @@
 /*
  * Grid template.
  *
- * This template can be overriden by copying this file to your-theme/bs-grid-main/grid.php
+ * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-grid.php
  *
  * @author 		bootScore
  * @package 	bS Grid

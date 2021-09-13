@@ -96,7 +96,7 @@ function bs_grid_get_template( $template_name, $args = array(), $tempate_path = 
 
 function bs_post_page_grid() {
 
-	return bs_grid_get_template( 'grid.php' );
+	return bs_grid_get_template( 'sc-grid.php' );
 
 }
 add_action('wp_head', 'bs_post_page_grid');
@@ -104,7 +104,7 @@ add_action('wp_head', 'bs_post_page_grid');
 
 function bs_post_page_list() {
 
-    return bs_grid_get_template( 'list.php' );
+    return bs_grid_get_template( 'sc-list.php' );
 
 }
 add_action('wp_head', 'bs_post_page_list');

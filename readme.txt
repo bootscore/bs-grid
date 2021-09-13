@@ -1,15 +1,16 @@
-=== bS5 Post / Page Grid / List ===
+=== bS Grid ===
 
-Contributors: craftwerk
+Contributors: Bastian Kreiter
 
 Requires at least: 4.5
-Tested up to: 5.6.2
+Tested up to: 5.8.1
 Requires PHP: 5.6
-Stable tag: 5.0.0.1
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 5.1.0.0
+License: MIT License
+License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
-Post / Page Grid / List for bootScore WordPress Theme, Copyright 2020 Bastian Kreiter.
+Post / Page / Custom Post Type Grid or List for bootScore WordPress Theme, Copyright 2020 - 2021 The bootScore Contributors.
+
 
 == Installation ==
 
@@ -17,40 +18,66 @@ Post / Page Grid / List for bootScore WordPress Theme, Copyright 2020 Bastian Kr
 2. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
 3. Click Activate to use your new Plugin right away.
 
+
 == Usage ==
 
-= Posts =
+    = Posts =
 
-Use a shortcode like this to display posts in a page:
+        Use a shortcode like this to display posts somewhere:
 
-[bs-post-grid type="post" category="sample-category" order="ASC" orderby="title" posts="12"]
+        [bs-grid type="post" category="sample-category" order="ASC" orderby="title" posts="12"]
 
-[bs-post-list type="post" category="sample-category, test-category" order="DESC" orderby="date"]
+        [bs-list type="post" category="sample-category, test-category" order="DESC" orderby="date"]
 
-Options:
+        Options:
 
-category: category slug - Multiple categories separated by commas
-order: ASC or DESC
-orderby: date or title
-posts: number of posts to display
+        category: category slug - Multiple categories separated by commas
+        order: ASC or DESC
+        orderby: date or title
+        posts: number of posts to display
 
-= Pages =
+    = Pages =
 
-Use a shortcode like this to display child pages in a page:
+        Use a shortcode like this to display child pages somewhere:
 
-[bs-post-grid type="page" post_parent="413" order="ASC" orderby="title" posts="6"]
+        [bs-grid type="page" post_parent="413" order="ASC" orderby="title" posts="6"]
 
-[bs-post-grid type="page" post_parent="45" order="DESC" orderby="date"]
+        [bs-list type="page" post_parent="45" order="DESC" orderby="date"]
 
-Options:
+        Options:
 
-post_parent: ID of your parent page
-order: ASC or DESC
-orderby: date or title
-posts: number of pages to display
+        post_parent: ID of your parent page
+        order: ASC or DESC
+        orderby: date or title
+        posts: number of pages to display
+
+    = Custom Post Types =
+
+        Use a shortcode like this to display custom post types somewhere:
+
+        [bs-grid type="isotope" tax="isotope_category" cat_parent="6" order="DESC" orderby="date" posts="10"]
+
+        [bs-list type="isotope" tax="isotope_category" cat_parent="6" order="DESC" orderby="date" posts="10"]
+
+        Options:
+
+        type: type of custom post type
+        tax: taxonomy
+        cat_parent: ID of parent taxonomy
+        order: ASC or DESC
+        orderby: date or title
+        posts: number of posts to display 
 
 
 == Changelog ==
+
+    = 5.1.0.0 - September 13 2021 =
+    
+        * [NEW] Update checker
+        * [NEW] Shows Custom Post Types
+        * [CHANGED] MIT License
+        * [CHANGED] Repository name
+        * [CHANGED] Shortcodes
 
     = 5.0.0.1 - February 16 2021 =
     

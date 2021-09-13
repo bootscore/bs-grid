@@ -2,22 +2,24 @@
 /*
  * List template.
  *
- * This template can be overriden by copying this file to your-theme/bs5-post-page-grid-list/list.php
+ * This template can be overriden by copying this file to your-theme/bs-grid-main/list.php
  *
- * @author 		Bastian Kreiter
- * @package 	bS5 Post/Page Grid/List
+ * @author 		bootScore
+ * @package 	bS Grid
  * @version     1.0.0
 
-Post/Page List Shortcode 
-Posts: [bs-post-list type="post" category="documentation, category-default" order="DESC" orderby="date" posts="6"]
-Pages: [bs-post-list type="page" post_parent="413" order="DESC" orderby="date"]
+Post/Page/CPT List Shortcodes:
+
+Posts: [bs-list type="post" category="documentation, category-default" order="DESC" orderby="date" posts="6"]
+Pages: [bs-list type="page" post_parent="413" order="DESC" orderby="date"]
+Custom Post Types: [bs-list type="isotope" tax="isotope_category" cat_parent="6" order="DESC" orderby="date" posts="10"]
 */
 
 
 
 // Post List Shortcode
-add_shortcode( 'bs-post-list', 'bootscore_post_list' );
-function bootscore_post_list( $atts ) {
+add_shortcode( 'bs-list', 'bootscore_list' );
+function bootscore_list( $atts ) {
 	ob_start();
 	extract( shortcode_atts( array (
 		'type' => 'post',
@@ -25,7 +27,9 @@ function bootscore_post_list( $atts ) {
 		'orderby' => 'date',
 		'posts' => -1,
 		'category' => '',
-        'post_parent'    => '',
+        'post_parent'    => '', // parent-id child-pages
+        'cat_parent'    => '', // parent-taxonomy-id CPT
+		'tax' => '' // CPT taxonomy
 	), $atts ) );
 	$options = array(
 		'post_type' => $type,
@@ -35,6 +39,23 @@ function bootscore_post_list( $atts ) {
 		'category_name' => $category,
         'post_parent' => $post_parent,
 	);
+    // CPT - Check if taxonomy and terms were defined
+	if ( $tax != '' && $cat_parent != '' ) {
+		$terms = explode( ',', trim( $cat_parent ) );
+		$terms = array_map( 'trim', $terms );
+		$terms = array_unique( $terms );
+		$terms = array_filter( $terms );
+		$options['tax_query'] = array(
+			'relation' => 'AND',
+			array(
+				'taxonomy' => $tax,
+				'field'    => 'term_id',
+				'terms'    => $terms,
+				'operator' => 'IN'
+			)
+		);
+	}
+    
 	$query = new WP_Query( $options );
 	if ( $query->have_posts() ) { ?>
 
@@ -71,8 +92,9 @@ function bootscore_post_list( $atts ) {
                 </small>
                 <?php endif; ?>
                 <!-- Excerpt & Read more -->
-                <div class="card-text mt-auto">
-                    <?php the_excerpt(); ?> <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+                <div class="card-text">
+                    <?php the_excerpt(); ?> 
+                    <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
                 </div>
                 <!-- Tags -->
                 <?php bootscore_tags(); ?>

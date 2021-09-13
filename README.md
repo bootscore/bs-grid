@@ -82,8 +82,8 @@ The copied file will now override the bS Grid template file. Change cards, class
 
 ### Templates that can be overwritten:
 
-- grid.php
-- list.php
+- sc-grid.php
+- sc-list.php
 
 
 ## License & Credits

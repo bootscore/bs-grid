@@ -12,6 +12,11 @@ License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 Post / Page / Custom Post Type Grid or List for bootScore WordPress Theme, Copyright 2020 - 2021 The bootScore Contributors.
 
 
+== Credits ==
+
+    - Plugin Update Checker, YahnisElsts, MIT License https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
+
+
 == Installation ==
 
 1. In your admin panel, go to Plugins > and click the Add New button.

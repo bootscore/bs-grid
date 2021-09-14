@@ -1,12 +1,20 @@
 <?php
 /*Plugin Name: bS Grid
 Plugin URI: https://bootscore.me/plugins/bs-grid/
-Description: Displays posts from category, child pages from parent id or custom post typers by parent taxonomy id in your post or page via shortcode.
+Description: Displays posts from category, child pages from parent id or custom post types by parent taxonomy id in your post or page via shortcode.
 Version: 5.1.0.0
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License
 */
+
+// Update checker
+require 'update/update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://bootscore.me/wp-content/plugins/bs-grid-main/update/plugin.json',
+	__FILE__, //Full path to the main plugin file or functions.php.
+	'bs-grid-main'
+);
 
 
 /**

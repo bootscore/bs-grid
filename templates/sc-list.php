@@ -6,20 +6,30 @@
  *
  * @author 		bootScore
  * @package 	bS Grid
- * @version     1.0.0
+ * @version     2.0.0
 
-Post/Page/CPT List Shortcodes:
+Post/Page/CPT List Shortcodes
 
-Posts: [bs-list type="post" category="documentation, category-default" order="DESC" orderby="date" posts="6"]
-Pages: [bs-list type="page" post_parent="413" order="DESC" orderby="date"]
-Custom Post Types: [bs-list type="isotope" tax="isotope_category" cat_parent="6" order="DESC" orderby="date" posts="10"]
+Posts: 
+[bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+
+Child-pages: 
+[bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+
+Custom post types:
+[bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+
+Single items:
+[bs-list type="post" id="1, 15"]
+[bs-list type="page" id="2, 25"]
+[bs-list type="isotope" id="33, 31"]
 */
 
 
-
-// Post List Shortcode
+// List Shortcode
 add_shortcode( 'bs-list', 'bootscore_list' );
 function bootscore_list( $atts ) {
+	
 	ob_start();
 	extract( shortcode_atts( array (
 		'type' => 'post',
@@ -27,10 +37,12 @@ function bootscore_list( $atts ) {
 		'orderby' => 'date',
 		'posts' => -1,
 		'category' => '',
-        'post_parent'    => '', // parent-id child-pages
-        'cat_parent'    => '', // parent-taxonomy-id CPT
-		'tax' => '' // CPT taxonomy
+        'post_parent'    => '',
+		'tax' => '',
+		'terms' => '',
+		'id' => ''
 	), $atts ) );
+
 	$options = array(
 		'post_type' => $type,
 		'order' => $order,
@@ -39,29 +51,34 @@ function bootscore_list( $atts ) {
 		'category_name' => $category,
         'post_parent' => $post_parent,
 	);
-    // CPT - Check if taxonomy and terms were defined
-	if ( $tax != '' && $cat_parent != '' ) {
-		$terms = explode( ',', trim( $cat_parent ) );
+
+	$tax = trim( $tax );
+	$terms = trim( $terms );
+	if ( $tax != '' && $terms != '' ) {
+		$terms = explode( ',', $terms );
 		$terms = array_map( 'trim', $terms );
-		$terms = array_unique( $terms );
 		$terms = array_filter( $terms );
-		$options['tax_query'] = array(
-			'relation' => 'AND',
-			array(
-				'taxonomy' => $tax,
-				'field'    => 'term_id',
-				'terms'    => $terms,
-				'operator' => 'IN'
-			)
-		);
+		$terms = array_unique( $terms );
+		unset( $options['category_name'] );
+		$options['tax_query'] = array( array(
+            'taxonomy' => $tax,
+            'field'    => 'name',
+            'terms'    => $terms,
+        ) );
+	}
+
+	if ( $id != '' ) {
+		$ids = explode( ',', $id );
+		$ids = array_map( 'intval', $ids );
+		$ids = array_filter( $ids );
+		$ids = array_unique( $ids );
+		$options['post__in'] = $ids;
 	}
     
 	$query = new WP_Query( $options );
 	if ( $query->have_posts() ) { ?>
 
-
 <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
 
 <div class="card horizontal mb-4">
     <div class="row">
@@ -112,4 +129,4 @@ function bootscore_list( $atts ) {
 	}	
 }
 
-// Post List Shortcode End
+// List Shortcode End

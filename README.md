@@ -17,54 +17,75 @@ Documentation: https://bootscore.me/documentation/bs-grid/
 
 ### Posts
 
-Use shortcode to show posts:
+#### Shortcodes to show posts by category
 
-#### Grid: 
+##### Grid
 
 `[bs-grid type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`   
 
-#### List:
+##### List
 
-` [bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`
+`[bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`
 
-#### Options:
+##### Options
 
 - category: category-slug, multiple categories separated by comma
 - order: ASC or DESC
 - orderby: date, title, or rand
 - posts: amount of posts to show
 
+#### Shortcodes to show single posts
+
+##### Grid
+
+`[bs-grid type="post" id="1, 15"]`
+
+##### List
+
+`[bs-list type="post" id="1, 15"]`
+
+
 ### Pages
 
-Use shortcode to show child pages:
+#### Shortcodes to show child-pages by parent-page id
 
-#### Grid:
+##### Grid
 
 `[bs-grid type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
-#### List:
+##### List
 `[bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
-#### Options:
+##### Options
 
 - post_parent: ID of parent page
 - order: ASC or DESC
 - orderby: date, title, or rand
 - posts: amount of pages to show
 
+#### Shortcodes to show single pages
+
+##### Grid
+
+`[bs-grid type="page" id="2, 25"]`
+
+##### List
+
+`[bs-list type="page" id="2, 25"]`
+
 ### Custom Post Types
 
-Use shortcode to show custom post types:
+#### Shortcodes to show custom post types by terms
 
-#### Grid:
+##### Grid:
 
 `[bs-grid type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
 
-#### List:
+##### List:
 
 `[bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
 
-#### Options:
+##### Options:
 
 - type: type of custom post type
 - tax: taxonomy
@@ -72,6 +93,16 @@ Use shortcode to show custom post types:
 - order: ASC or DESC
 - orderby: date, title, or rand
 - posts: amount of custom post types to show 
+
+#### Shortcodes to show single custom post types
+
+##### Grid
+
+`[bs-grid type="isotope" id="33, 31"]`
+
+##### List
+
+`[bs-grid type="isotope" id="33, 31"]`
 
 ## Overriding templates via theme
 
@@ -81,7 +112,7 @@ Edit files in an upgrade-safe way using overrides. Copy the template into a dire
 
 The copied file will now override the bS Grid template file. Change cards, classes or HTML as you want.
 
-### Templates that can be overwritten:
+### Templates that can be overridden
 
 - sc-grid.php
 - sc-list.php

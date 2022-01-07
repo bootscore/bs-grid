@@ -83,7 +83,7 @@ Post/Page/CPT Grid/List Shortcodes
     
 == Changelog ==
 
-    = 5.2.0.0 - january 10 2022 =
+    = 5.2.0.0 - January 10 2022 =
     
         * [NEW] Added shortcode to show single items by id
         * [NEW] Added shortcode for custom post types by terms-slug

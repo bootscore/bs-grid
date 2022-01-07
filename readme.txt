@@ -36,7 +36,7 @@ Post/Page/CPT Grid/List Shortcodes
     
     Options:
 
-    category: category-slug - Multiple categories separated by comma
+    category: category-slug - multiple categories separated by comma
     order: ASC or DESC
     orderby: date or title
     posts: number of posts to display  
@@ -60,7 +60,8 @@ Post/Page/CPT Grid/List Shortcodes
     [bs-grid type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
     [bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
 
-    terms: terms-slug - Multiple terms separated by comma
+    type: type of custom post type
+    terms: terms-slug - multiple terms separated by comma
     order: ASC or DESC
     orderby: date or title
     posts: number of posts to display 

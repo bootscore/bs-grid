@@ -21,35 +21,36 @@ Use shortcode to show posts:
 
 #### Grid: 
 
-`[bs-grid type="post" category="water, classic, markup" order="DESC" orderby="date" posts="12"]`
+`[bs-grid type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`   
 
 #### List:
 
-`[bs-list type="post" category="water, classic, markup" order="DESC" orderby="date" posts="12"]`
+` [bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`
 
 #### Options:
 
-- category: category slug, separated by comma for multiple categories
+- category: category-slug, multiple categories separated by comma
 - order: ASC or DESC
 - orderby: date, title, or rand
-- posts: number of posts to display
+- posts: amount of posts to show
 
 ### Pages
 
 Use shortcode to show child pages:
 
 #### Grid:
-`[bs-grid type="page" post_parent="1891" order="ASC" orderby="title" posts="6"]`
+
+`[bs-grid type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
 #### List:
-`[bs-list type="page" post_parent="1891" order="ASC" orderby="title" posts="6"]`
+`[bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
 #### Options:
 
 - post_parent: ID of parent page
 - order: ASC or DESC
 - orderby: date, title, or rand
-- posts: number of pages to display
+- posts: amount of pages to show
 
 ### Custom Post Types
 
@@ -57,20 +58,20 @@ Use shortcode to show custom post types:
 
 #### Grid:
 
-`[bs-grid type="isotope" tax="isotope_category" cat_parent="224" order="DESC" orderby="date" posts="10"]`
+`[bs-grid type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
 
 #### List:
 
-`[bs-list type="isotope" tax="isotope_category" cat_parent="224" order="DESC" orderby="date" posts="10"]`
+`[bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
 
 #### Options:
 
 - type: type of custom post type
 - tax: taxonomy
-- cat_parent: ID of parent taxonomy
+- terms: terms-slug, multiple terms separated by comma
 - order: ASC or DESC
 - orderby: date, title, or rand
-- posts: number of posts to display 
+- posts: amount of custom post types to show 
 
 ## Overriding templates via theme
 

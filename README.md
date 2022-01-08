@@ -1,6 +1,6 @@
 # bS Grid
 
-WordPress plugin to show posts, pages or custom post types in grid or list cards via shortcode in bootScore theme.
+WordPress plugin to show posts, pages or custom-post-types in grid or list cards via shortcode in bootScore theme.
 
 - Demo: https://bootscore.me/plugins/bs-grid/
 - Documentation: https://bootscore.me/documentation/bs-grid/
@@ -68,22 +68,22 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 
 ## Custom Post Types
 
-### Shortcode to show custom post types by terms
+### Shortcode to show custom-post-types by terms
 `[bs-* type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
 
 #### Options:
-- type: type of custom post type
+- type: type of custom-post-type
 - tax: taxonomy
 - terms: terms-slug, multiple terms separated by comma
 - order: ASC or DESC
 - orderby: date, title, or rand
 - posts: amount of custom post types to show 
 
-### Shortcode to show single custom post types by id
+### Shortcode to show single custom-post-types by id
 `[bs-* type="isotope" id="33, 31"]`
 
 #### Options
-- id: id of custom post type, multiple ids separated by comma 
+- id: id of custom-post-type, multiple ids separated by comma 
 
 ## Overriding templates via theme
 Template files can be found within the **/bs-grid-main/templates/** plugin directory.

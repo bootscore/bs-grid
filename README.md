@@ -2,8 +2,7 @@
 
 WordPress plugin to show posts, pages or custom-post-types in grid or list cards via shortcode in bootScore theme.
 
-- Demo: https://bootscore.me/plugins/bs-grid/
-- Documentation: https://bootscore.me/documentation/bs-grid/
+- Demo and documentation: https://bootscore.me/documentation/bs-grid/
 
 <img src="https://lh3.googleusercontent.com/pw/AM-JKLUxNADNzUEZvT53A8bP1QXSGubd4GEHdhPZw4wx3IsCu0A4XT7uM0SNBfrTzplvmE9jFBXr_Twytum2cWrDg0Scgroha0IRcp_73Y6NL3GZUrOlVbeL4-WeQS-UbXL2JVmLxjqq7JFdDTbPXivTtJsjRg=w1904-h1530-no" alt="bs-grid">
 

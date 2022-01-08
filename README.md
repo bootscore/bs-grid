@@ -88,7 +88,7 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 ## Overriding templates via theme
 Template files can be found within the **/bs-grid-main/templates/** plugin directory.
 
-Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named /bs-grid-main keeping the same file structure but removing the /templates/ subdirectory. Path must be **/your-theme/bs-grid-main/[file].php**.
+Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named **/bs-grid-main/** keeping the same file structure but removing the **/templates/** subdirectory. Path must be **/your-theme/bs-grid-main/[file].php**.
 
 The copied file will now override the bS Grid template file. Change cards, classes or HTML as you want.
 

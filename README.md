@@ -15,7 +15,7 @@ WordPress plugin to show posts, pages or custom post types in grid or list cards
 
 ## Usage
 
-Select the grid you want to use by replacing `bs-*` placeholder in shortcode examples.
+Select template you want to use by replacing `bs-*` placeholder in shortcode examples.
 
 - `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards
 - `bs-list` shows items in 1 column vertical cards (md) and flip into 1 column horizontal cards (lg).

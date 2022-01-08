@@ -18,7 +18,7 @@ WordPress plugin to show posts, pages or custom post types in grid or list cards
 Select the grid you want to use by replacing `bs-*` placeholder in shortcode examples.
 
 - `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards
-- `bs-list`
+- `bs-list` shows items in 1 column vertical cards (md) and flip into 1 column horizontally cards (lg).
 
 ## Posts
 
@@ -86,9 +86,9 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 - id: id of custom post type, multiple ids separated by comma 
 
 ## Overriding templates via theme
-Template files can be found within the /bs-grid-main/templates/ plugin directory.
+Template files can be found within the **/bs-grid-main/templates/** plugin directory.
 
-Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named /bs-grid-main keeping the same file structure but removing the /templates/ subdirectory. Path must be `/your-theme/bs-grid-main/[file].php`.
+Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named /bs-grid-main keeping the same file structure but removing the /templates/ subdirectory. Path must be **/your-theme/bs-grid-main/[file].php**.
 
 The copied file will now override the bS Grid template file. Change cards, classes or HTML as you want.
 

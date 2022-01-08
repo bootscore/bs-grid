@@ -5,6 +5,8 @@ WordPress plugin to show posts, pages or custom post types in grid or list cards
 - Demo: https://bootscore.me/plugins/bs-grid/
 - Documentation: https://bootscore.me/documentation/bs-grid/
 
+<img src="https://lh3.googleusercontent.com/pw/AM-JKLUxNADNzUEZvT53A8bP1QXSGubd4GEHdhPZw4wx3IsCu0A4XT7uM0SNBfrTzplvmE9jFBXr_Twytum2cWrDg0Scgroha0IRcp_73Y6NL3GZUrOlVbeL4-WeQS-UbXL2JVmLxjqq7JFdDTbPXivTtJsjRg=w1904-h1530-no" alt="bs-grid">
+
 ## Installation
 1. Download latest release [bs-grid-main.zip](https://github.com/bootscore/bs-grid/releases). 
 2. In your admin panel, go to Plugins > and click the Add New button.
@@ -15,10 +17,10 @@ WordPress plugin to show posts, pages or custom post types in grid or list cards
 
 Select the grid you want to use by replacing `bs-*` placeholder in shortcode examples.
 
-- `bs-grid`
+- `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards
 - `bs-list`
 
-### Posts
+## Posts
 
 #### Shortcode to show posts by category
 `[bs-* type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`   
@@ -45,10 +47,12 @@ Select the grid you want to use by replacing `bs-*` placeholder in shortcode exa
 #### Options
 - id: id of post, multiple ids separated by comma 
 
-### Pages
+## Pages
 
 #### Shortcode to show child-pages by parent-page id
 `[bs-* type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
+
+Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 
 #### Options
 - post_parent: id of parent page
@@ -62,7 +66,7 @@ Select the grid you want to use by replacing `bs-*` placeholder in shortcode exa
 #### Options
 - id: id of page, multiple ids separated by comma 
 
-### Custom Post Types
+## Custom Post Types
 
 #### Shortcode to show custom post types by terms
 `[bs-* type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`

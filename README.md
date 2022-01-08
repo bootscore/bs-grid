@@ -2,9 +2,8 @@
 
 WordPress plugin to show posts, child-pages or custom post types in grid or list cards in bootScore theme.
 
-Demo: https://bootscore.me/plugins/bs-grid/
-
-Documentation: https://bootscore.me/documentation/bs-grid/
+- Demo: https://bootscore.me/plugins/bs-grid/
+- Documentation: https://bootscore.me/documentation/bs-grid/
 
 ## Installation
 
@@ -20,16 +19,28 @@ Documentation: https://bootscore.me/documentation/bs-grid/
 #### Shortcodes to show posts by category
 
 ##### Grid
-
 `[bs-grid type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`   
 
 ##### List
-
 `[bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`
 
 ##### Options
-
 - category: category-slug, multiple categories separated by comma
+- order: ASC or DESC
+- orderby: date, title, or rand
+- posts: amount of posts to show
+
+#### Shortcodes to show posts by tags
+
+##### Grid
+`[bs-grid type="post" tax="post_tag" terms="bikes, motorbikes" order="DESC" orderby="date" posts="5"]`
+
+##### List
+`[bs-grid type="post" tax="post_tag" terms="bikes, motorbikes" order="DESC" orderby="date" posts="5"]`
+
+##### Options
+- tax: taxonomy (post_tag)
+- terms: tags-slug, multiple terms separated by comma
 - order: ASC or DESC
 - orderby: date, title, or rand
 - posts: amount of posts to show
@@ -37,27 +48,22 @@ Documentation: https://bootscore.me/documentation/bs-grid/
 #### Shortcodes to show single posts
 
 ##### Grid
-
 `[bs-grid type="post" id="1, 15"]`
 
 ##### List
-
 `[bs-list type="post" id="1, 15"]`
-
 
 ### Pages
 
 #### Shortcodes to show child-pages by parent-page id
 
 ##### Grid
-
 `[bs-grid type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
 ##### List
 `[bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
 ##### Options
-
 - post_parent: ID of parent page
 - order: ASC or DESC
 - orderby: date, title, or rand

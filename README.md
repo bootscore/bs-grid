@@ -1,6 +1,6 @@
 # bS Grid
 
-WordPress plugin to show posts, pages or custom post types in grid or list cards in bootScore theme.
+WordPress plugin to show posts, pages or custom post types in grid or list cards via shortcode in bootScore theme.
 
 - Demo: https://bootscore.me/plugins/bs-grid/
 - Documentation: https://bootscore.me/documentation/bs-grid/

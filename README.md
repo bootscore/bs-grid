@@ -51,7 +51,7 @@ Select the grid you want to use by replacing `bs-*` placeholder in shortcode exa
 `[bs-* type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
 #### Options
-- post_parent: ID of parent page
+- post_parent: id of parent page
 - order: ASC or DESC
 - orderby: date, title, or rand
 - posts: amount of pages to show

@@ -22,7 +22,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 
 ## Posts
 
-#### Shortcode to show posts by category
+### Shortcode to show posts by category
 `[bs-* type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]`   
 
 #### Options
@@ -31,7 +31,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - orderby: date, title, or rand
 - posts: amount of posts to show
 
-#### Shortcode to show posts by tags
+### Shortcode to show posts by tags
 `[bs-* type="post" tax="post_tag" terms="bikes, motorbikes" order="DESC" orderby="date" posts="5"]`
 
 #### Options
@@ -41,7 +41,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - orderby: date, title, or rand
 - posts: amount of posts to show
 
-#### Shortcode to show single posts by id
+### Shortcode to show single posts by id
 `[bs-* type="post" id="1, 15"]`
 
 #### Options
@@ -49,7 +49,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 
 ## Pages
 
-#### Shortcode to show child-pages by parent-page id
+### Shortcode to show child-pages by parent-page id
 `[bs-* type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
 
 Showing child-pages in parent-page is very useful to avoid empty parent-pages.
@@ -60,7 +60,7 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 - orderby: date, title, or rand
 - posts: amount of pages to show
 
-#### Shortcode to show single pages by id
+### Shortcode to show single pages by id
 `[bs-* type="page" id="2, 25"]`
 
 #### Options
@@ -68,7 +68,7 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 
 ## Custom Post Types
 
-#### Shortcode to show custom post types by terms
+### Shortcode to show custom post types by terms
 `[bs-* type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
 
 #### Options:
@@ -79,7 +79,7 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 - orderby: date, title, or rand
 - posts: amount of custom post types to show 
 
-#### Shortcode to show single custom post types by id
+### Shortcode to show single custom post types by id
 `[bs-* type="isotope" id="33, 31"]`
 
 #### Options

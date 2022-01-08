@@ -77,7 +77,7 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 - terms: terms-slug, multiple terms separated by comma
 - order: ASC or DESC
 - orderby: date, title, or rand
-- posts: amount of custom post types to show 
+- posts: amount of custom-post-types to show 
 
 ### Shortcode to show single custom-post-types by id
 `[bs-* type="isotope" id="33, 31"]`

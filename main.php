@@ -2,7 +2,7 @@
 /*Plugin Name: bS Grid
 Plugin URI: https://bootscore.me/plugins/bs-grid/
 Description: Displays posts from category, child pages from parent id or custom post types by parent taxonomy id in your post or page via shortcode.
-Version: 5.1.0.0
+Version: 5.2.0.0
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License

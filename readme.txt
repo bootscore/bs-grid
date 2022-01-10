@@ -89,6 +89,8 @@ Post/Page/CPT Grid/List Shortcodes
         * [NEW] Added shortcode to show single items by id
         * [NEW] Added shortcode for custom post types by terms-slug
         * [REMOVED] Shortcode for CPT by parent terms id
+        * [CHANGED] Template sc-grid.php
+        * [CHANGED] Template sc-list.php
 
     = 5.1.0.0 - September 13 2021 =
     

@@ -6,7 +6,7 @@
  *
  * @author 		bootScore
  * @package 	bS Grid
- * @version     2.0.0
+ * @version     5.2.1.0
 
 Post/Page/CPT Grid Shortcodes
 
@@ -84,11 +84,9 @@ function bootscore_grid($atts) {
           <div class="card h-100">
             <!-- Featured Image-->
             <?php the_post_thumbnail('medium', array('class' => 'card-img-top')); ?>
-
             <div class="card-body d-flex flex-column">
-
+              <!-- Category badge -->
               <?php bootscore_category_badge(); ?>
-
               <!-- Title -->
               <h2 class="blog-post-title">
                 <a href="<?php the_permalink(); ?>">
@@ -110,7 +108,6 @@ function bootscore_grid($atts) {
               <div class="card-text">
                 <?php the_excerpt(); ?>
               </div>
-
               <div class="mt-auto">
                 <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
               </div>
@@ -121,7 +118,7 @@ function bootscore_grid($atts) {
         </div>
       <?php endwhile;
       wp_reset_postdata(); ?>
-    </div>
+    </div><!-- .row -->
 
 <?php $myvariable = ob_get_clean();
     return $myvariable;

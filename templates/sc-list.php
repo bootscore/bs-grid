@@ -6,7 +6,7 @@
  *
  * @author 		bootScore
  * @package 	bS Grid
- * @version     2.0.0
+ * @version     5.2.1.0
 
 Post/Page/CPT List Shortcodes
 
@@ -88,9 +88,8 @@ function bootscore_list($atts) {
           ?>
           <div class="col">
             <div class="card-body">
-
+              <!-- Category badge -->
               <?php bootscore_category_badge(); ?>
-
               <!-- Title -->
               <h2 class="blog-post-title">
                 <a href="<?php the_permalink(); ?>">
@@ -120,10 +119,8 @@ function bootscore_list($atts) {
         </div> <!-- .row -->
       </div> <!-- .card -->
 
-
     <?php endwhile;
     wp_reset_postdata(); ?>
-
 
 <?php $myvariable = ob_get_clean();
     return $myvariable;

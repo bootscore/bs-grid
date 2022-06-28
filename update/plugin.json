@@ -1,8 +1,8 @@
  {
  	"name" : "bS Grid",
- 	"version" : "5.2.0.0",
- 	"download_url" : "https://github.com/bootscore/bs-grid/archive/refs/heads/main.zip",
+ 	"version" : "5.2.1.0",
+ 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/5.2.1.0/bs-grid-main.zip",
  	"sections" : {
- 		"description" : "Removed shortcode custom post types by parent-term id, added shortcode single-item by id and custom post types by term-slug"
+ 		"description" : "Added new hero template."
  	}
  }

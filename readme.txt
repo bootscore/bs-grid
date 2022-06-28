@@ -3,13 +3,13 @@
 Contributors: Bastian Kreiter, torricelli
 
 Requires at least: 4.5
-Tested up to: 5.8.3
+Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 5.2.0.0
+Stable tag: 5.2.1.0
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
-Post / Page / Custom Post Type Grid or List for bootScore WordPress Theme, Copyright 2020 - 2022 The bootScore Contributors.
+Post / Page / Custom Post Type Grid, List or Hero for bootScore WordPress Theme, Copyright 2020 - 2022 The bootScore Contributors.
 
 
 == Credits ==
@@ -33,6 +33,7 @@ Post/Page/CPT Grid/List Shortcodes
 
     [bs-grid type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
     [bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+    [bs-hero type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
     
     Options:
 
@@ -46,6 +47,7 @@ Post/Page/CPT Grid/List Shortcodes
 
     [bs-grid type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
     [bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+    [bs-hero type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
 
     Options:
 
@@ -59,6 +61,7 @@ Post/Page/CPT Grid/List Shortcodes
 
     [bs-grid type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
     [bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+    [bs-hero type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
 
     type: type of custom post type
     terms: terms-slug - multiple terms separated by comma
@@ -72,17 +75,25 @@ Post/Page/CPT Grid/List Shortcodes
     Posts
     [bs-grid type="post" id="1, 15"]
     [bs-list type="post" id="1, 15"]
+    [bs-hero type="post" id="1, 15"]
     
     Pages
     [bs-grid type="page" id="2, 25"]
     [bs-list type="page" id="2, 25"]
+    [bs-hero type="page" id="2, 25"]
     
     Custom post types
     [bs-grid type="isotope" id="33, 31"]
     [bs-list type="isotope" id="33, 31"]
+    [bs-hero type="isotope" id="33, 31"]
 
     
 == Changelog ==
+
+    = 5.2.1.0 - June 29 2022 =
+    
+        * Added new hero template
+        * Reformatted all files
 
     = 5.2.0.0 - January 10 2022 =
     

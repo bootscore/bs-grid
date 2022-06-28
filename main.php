@@ -112,3 +112,10 @@ function bs_post_page_list() {
   return bs_grid_get_template('sc-list.php');
 }
 add_action('wp_head', 'bs_post_page_list');
+
+
+function bs_post_page_hero() {
+
+  return bs_grid_get_template('sc-hero.php');
+}
+add_action('wp_head', 'bs_post_page_hero');

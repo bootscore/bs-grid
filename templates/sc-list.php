@@ -27,106 +27,107 @@ Single items:
 
 
 // List Shortcode
-add_shortcode( 'bs-list', 'bootscore_list' );
-function bootscore_list( $atts ) {
-	
-	ob_start();
-	extract( shortcode_atts( array (
-		'type' => 'post',
-		'order' => 'date',
-		'orderby' => 'date',
-		'posts' => -1,
-		'category' => '',
-        'post_parent'    => '',
-		'tax' => '',
-		'terms' => '',
-		'id' => ''
-	), $atts ) );
+add_shortcode('bs-list', 'bootscore_list');
+function bootscore_list($atts) {
 
-	$options = array(
-		'post_type' => $type,
-		'order' => $order,
-		'orderby' => $orderby,
-		'posts_per_page' => $posts,
-		'category_name' => $category,
-        'post_parent' => $post_parent,
-	);
+  ob_start();
+  extract(shortcode_atts(array(
+    'type' => 'post',
+    'order' => 'date',
+    'orderby' => 'date',
+    'posts' => -1,
+    'category' => '',
+    'post_parent'    => '',
+    'tax' => '',
+    'terms' => '',
+    'id' => ''
+  ), $atts));
 
-	$tax = trim( $tax );
-	$terms = trim( $terms );
-	if ( $tax != '' && $terms != '' ) {
-		$terms = explode( ',', $terms );
-		$terms = array_map( 'trim', $terms );
-		$terms = array_filter( $terms );
-		$terms = array_unique( $terms );
-		unset( $options['category_name'] );
-		$options['tax_query'] = array( array(
-            'taxonomy' => $tax,
-            'field'    => 'name',
-            'terms'    => $terms,
-        ) );
-	}
+  $options = array(
+    'post_type' => $type,
+    'order' => $order,
+    'orderby' => $orderby,
+    'posts_per_page' => $posts,
+    'category_name' => $category,
+    'post_parent' => $post_parent,
+  );
 
-	if ( $id != '' ) {
-		$ids = explode( ',', $id );
-		$ids = array_map( 'intval', $ids );
-		$ids = array_filter( $ids );
-		$ids = array_unique( $ids );
-		$options['post__in'] = $ids;
-	}
-    
-	$query = new WP_Query( $options );
-	if ( $query->have_posts() ) { ?>
+  $tax = trim($tax);
+  $terms = trim($terms);
+  if ($tax != '' && $terms != '') {
+    $terms = explode(',', $terms);
+    $terms = array_map('trim', $terms);
+    $terms = array_filter($terms);
+    $terms = array_unique($terms);
+    unset($options['category_name']);
+    $options['tax_query'] = array(array(
+      'taxonomy' => $tax,
+      'field'    => 'name',
+      'terms'    => $terms,
+    ));
+  }
 
-<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+  if ($id != '') {
+    $ids = explode(',', $id);
+    $ids = array_map('intval', $ids);
+    $ids = array_filter($ids);
+    $ids = array_unique($ids);
+    $options['post__in'] = $ids;
+  }
 
-<div class="card horizontal mb-4">
-    <div class="row">
-        <!-- Featured Image-->
-        <?php if (has_post_thumbnail() )
+  $query = new WP_Query($options);
+  if ($query->have_posts()) { ?>
+
+    <?php while ($query->have_posts()) : $query->the_post(); ?>
+
+      <div class="card horizontal mb-4">
+        <div class="row">
+          <!-- Featured Image-->
+          <?php if (has_post_thumbnail())
             echo '<div class="card-img-left-md col-lg-5">' . get_the_post_thumbnail(null, 'medium') . '</div>';
-        ?>
-        <div class="col">
+          ?>
+          <div class="col">
             <div class="card-body">
-                
-                <?php bootscore_category_badge(); ?>
-                
-                <!-- Title -->
-                <h2 class="blog-post-title">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_title(); ?>
-                    </a>
-                </h2>
-                <!-- Meta -->
-                <?php if ( 'post' === get_post_type() ) : ?>
+
+              <?php bootscore_category_badge(); ?>
+
+              <!-- Title -->
+              <h2 class="blog-post-title">
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_title(); ?>
+                </a>
+              </h2>
+              <!-- Meta -->
+              <?php if ('post' === get_post_type()) : ?>
                 <small class="text-muted mb-2">
-                    <?php
-				        bootscore_date();
-				        bootscore_author();
-				        bootscore_comments();
-				        bootscore_edit();
-				    ?>
+                  <?php
+                  bootscore_date();
+                  bootscore_author();
+                  bootscore_comments();
+                  bootscore_edit();
+                  ?>
                 </small>
-                <?php endif; ?>
-                <!-- Excerpt & Read more -->
-                <div class="card-text">
-                    <?php the_excerpt(); ?> 
-                    <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
-                </div>
-                <!-- Tags -->
-                <?php bootscore_tags(); ?>
+              <?php endif; ?>
+              <!-- Excerpt & Read more -->
+              <div class="card-text">
+                <?php the_excerpt(); ?>
+                <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+              </div>
+              <!-- Tags -->
+              <?php bootscore_tags(); ?>
             </div><!-- .card-body -->
-        </div> <!-- .col -->
-    </div> <!-- .row -->
-</div> <!-- .card -->
+          </div> <!-- .col -->
+        </div> <!-- .row -->
+      </div> <!-- .card -->
 
 
-<?php endwhile; wp_reset_postdata(); ?>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
 
 
 <?php $myvariable = ob_get_clean();
-	return $myvariable;
-	}	
+    return $myvariable;
+  }
 }
 
 // List Shortcode End

@@ -6,7 +6,7 @@
  *
  * @author 		bootScore
  * @package 	bS Grid
- * @version     5.2.1.0
+ * @version   5.2.2.0
 
 Post/Page/CPT Hero Grid Shortcodes
 
@@ -26,10 +26,9 @@ Single items:
 */
 
 
-// Grid Shortcode
+// Accordion Shortcode
 add_shortcode('bs-accordion', 'bootscore_accordion');
-function bootscore_accordion($atts)
-{
+function bootscore_accordion($atts) {
 
   ob_start();
   extract(shortcode_atts(array(
@@ -79,35 +78,32 @@ function bootscore_accordion($atts)
   $query = new WP_Query($options);
   if ($query->have_posts()) { ?>
 
+    <div class="bs-accordion mb-4">
+      <div class="accordion">
+        <?php while ($query->have_posts()) : $query->the_post(); ?>
 
-<div class="bs-accordion accordion mb-4" id="accordionExample">
-  <?php while ($query->have_posts()) : $query->the_post(); ?>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false">
+                <?php the_title(); ?>
+              </button>
+            </h2>
+            <div class="accordion-collapse collapse" data-bs-parent=".accordion">
+              <div class="accordion-body">
+                <!-- Featured Image-->
+                <?php the_post_thumbnail('medium', array('class' => 'rounded mb-4')); ?>
+                <?php the_content(); ?>
+              </div>
+            </div>
+          </div>
 
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false">
-        <?php the_title(); ?>
-      </button>
-    </h2>
-    <div class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <!-- Featured Image-->
-        <?php the_post_thumbnail('medium', array('class' => 'rounded mb-4')); ?>
-        <?php the_content(); ?>
-      </div>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
+      </div><!-- .accordion -->
     </div>
-  </div>
-
-
-
-
-  <?php endwhile;
-    wp_reset_postdata(); ?>
-
-</div>
 
 <?php $myvariable = ob_get_clean();
     return $myvariable;
   }
 }
-// Grid Shortcode End
+// Accordion Shortcode End

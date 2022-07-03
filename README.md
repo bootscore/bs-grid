@@ -19,7 +19,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards.
 - `bs-list` shows items in 1 column vertical cards (md) and flip into 1 column horizontal cards (lg).
 - `bs-hero` shows hero items with background-images. 
-- `bs-accordion` shows items in a Bootstrap accordion. 
+- `bs-accordion` shows items with full content in a Bootstrap accordion. 
 
 ## Posts
 

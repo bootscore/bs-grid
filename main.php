@@ -17,6 +17,16 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 );
 
 
+// Register Scripts
+function bs_grid_scripts() {
+
+  wp_enqueue_script('bs-grid-js', plugins_url('/js/bs-grid.js', __FILE__), array(), false, true);
+
+}
+
+add_action('wp_enqueue_scripts', 'bs_grid_scripts');
+
+
 /**
  * Locate template.
  *
@@ -119,3 +129,10 @@ function bs_post_page_hero() {
   return bs_grid_get_template('sc-hero.php');
 }
 add_action('wp_head', 'bs_post_page_hero');
+
+
+function bs_post_page_accordion() {
+
+  return bs_grid_get_template('sc-accordion.php');
+}
+add_action('wp_head', 'bs_post_page_accordion');

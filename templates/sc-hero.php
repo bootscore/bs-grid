@@ -4,8 +4,8 @@
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-hero.php
  *
- * @author 		bootScore
- * @package 	bS Grid
+ * @author 	  bootScore
+ * @package   bS Grid
  * @version   5.2.1.0
 
 Post/Page/CPT Hero Grid Shortcodes

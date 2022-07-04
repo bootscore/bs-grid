@@ -82,8 +82,7 @@ function bs_grid_locate_template($template_name, $template_path = '', $default_p
  * @param string 	$string $template_path	Path to templates.
  * @param string	$default_path			Default path to template files.
  */
-function bs_grid_get_template($template_name, $args = array(), $tempate_path = '', $default_path = '')
-{
+function bs_grid_get_template($template_name, $args = array(), $tempate_path = '', $default_path = '') {
 
   if (is_array($args) && isset($args)) :
     extract($args);

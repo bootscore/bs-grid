@@ -4,8 +4,8 @@
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-accordion.php
  *
- * @author 		bootScore
- * @package 	bS Grid
+ * @author 	  bootScore
+ * @package   bS Grid
  * @version   5.2.2.0
 
 Post/Page/CPT Hero Grid Shortcodes

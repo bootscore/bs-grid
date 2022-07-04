@@ -1,6 +1,6 @@
 # bS Grid
 
-WordPress plugin to show posts, pages or custom-post-types in grid / list cards or a hero via shortcode in bootScore theme.
+WordPress plugin to show posts, pages or custom-post-types in grid / list cards, in heroes or an accordion via shortcode in bootScore theme.
 
 - Demo and documentation: https://bootscore.me/documentation/bs-grid/
 
@@ -19,6 +19,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards.
 - `bs-list` shows items in 1 column vertical cards (md) and flip into 1 column horizontal cards (lg).
 - `bs-hero` shows hero items with background-images. 
+- `bs-accordion` shows items with full content in a Bootstrap accordion. 
 
 ## Posts
 
@@ -96,6 +97,7 @@ The copied file will now override the bS Grid template file. Change cards, class
 - sc-grid.php
 - sc-list.php
 - sc-hero.php
+- sc-accordion.php
 
 ## License & Credits
 - bS Grid, MIT License https://github.com/bootscore/bs-grid/blob/main/LICENSE

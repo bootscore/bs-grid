@@ -2,7 +2,7 @@
 /*Plugin Name: bS Grid
 Plugin URI: https://bootscore.me/plugins/bs-grid/
 Description: Displays posts from category, child pages from parent id or custom post types by parent taxonomy id in your post or page via shortcode.
-Version: 5.2.1.0
+Version: 5.2.2.0
 Author: bootScore
 Author URI: https://bootscore.me
 License: MIT License
@@ -15,6 +15,14 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
   __FILE__, //Full path to the main plugin file or functions.php.
   'bs-grid-main'
 );
+
+
+// Register Scripts
+function bs_grid_scripts(){
+
+  wp_enqueue_script('bs-grid-js', plugins_url('/js/bs-grid.js', __FILE__), array(), false, true);
+}
+add_action('wp_enqueue_scripts', 'bs_grid_scripts');
 
 
 /**
@@ -100,22 +108,29 @@ function bs_grid_get_template($template_name, $args = array(), $tempate_path = '
  * @since 1.0.0
  */
 
-function bs_post_page_grid() {
+function bs_grid() {
 
   return bs_grid_get_template('sc-grid.php');
 }
-add_action('wp_head', 'bs_post_page_grid');
+add_action('wp_head', 'bs_grid');
 
 
-function bs_post_page_list() {
+function bs_grid_list() {
 
   return bs_grid_get_template('sc-list.php');
 }
-add_action('wp_head', 'bs_post_page_list');
+add_action('wp_head', 'bs_grid_list');
 
 
-function bs_post_page_hero() {
+function bs_grid_hero() {
 
   return bs_grid_get_template('sc-hero.php');
 }
-add_action('wp_head', 'bs_post_page_hero');
+add_action('wp_head', 'bs_grid_hero');
+
+
+function bs_grid_accordion() {
+
+  return bs_grid_get_template('sc-accordion.php');
+}
+add_action('wp_head', 'bs_grid_accordion');

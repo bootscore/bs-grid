@@ -91,7 +91,8 @@ function bootscore_accordion($atts) {
             <div class="accordion-collapse collapse" data-bs-parent=".accordion">
               <div class="accordion-body">
                 <!-- Featured Image-->
-                <?php the_post_thumbnail('medium', array('class' => 'rounded mb-4')); ?>
+                <?php bootscore_post_thumbnail(); ?>
+                <!-- Content -->
                 <?php the_content(); ?>
               </div>
             </div>

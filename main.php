@@ -134,3 +134,10 @@ function bs_grid_accordion() {
   return bs_grid_get_template('sc-accordion.php');
 }
 add_action('wp_head', 'bs_grid_accordion');
+
+
+function bs_grid_tabs() {
+
+  return bs_grid_get_template('sc-tabs.php');
+}
+add_action('wp_head', 'bs_grid_tabs');

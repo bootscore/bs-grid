@@ -1,5 +1,6 @@
 jQuery(function ($) {
 
+  // Accordion
   // Add dynamic id's to accordion
   $('.bs-accordion').each(function (i, e) {
     // Add dynamic id's to accordion
@@ -16,5 +17,19 @@ jQuery(function ($) {
     // Add dynamic id and aria-labelledby to accordion-collapse
     $(this).find(".accordion-collapse").attr("id", "accordion_collapse_" + i).attr("aria-labelledby", "heading_" + i);
   });
+  
+  
+  // Tabs
+    $('.bs-tabs').each(function (i, e) {
+    // Add dynamic id's to accordion
+    $(this).find(".nav-link").attr("id", "tab_" + i);
+    // Add dynamic data-bs-parent to accordion-collapse
+    //$(this).find('.tab-content .tab-pane').attr("id", "tab_content_" + i);
+  });
+  
+  // First nav-link active
+  $('.bs-tabs .nav-item:first-child .nav-link').addClass('active');
+
+  
 
 }); // jQuery End

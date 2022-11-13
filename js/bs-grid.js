@@ -19,16 +19,27 @@ jQuery(function ($) {
   });
   
   
+  
+  
   // Tabs
-    $('.bs-tabs').each(function (i, e) {
-    // Add dynamic id's to accordion
-    $(this).find(".nav-link").attr("id", "tab_" + i);
-    // Add dynamic data-bs-parent to accordion-collapse
-    //$(this).find('.tab-content .tab-pane').attr("id", "tab_content_" + i);
+  $('.bs-tabs .nav.nav-tabs .nav-link').each(function (i, e) {
+    $(this).attr("data-bs-target", "#tab_content_" + i);
+    });
+  
+  
+
+  $('.bs-tabs .tab-content .tab-pane').each(function (i, e) {
+      // Add dynamic id's to accordion-header
+    $(this).attr("id", "tab_content_" + i);
+    // Add dynamic data-bs-target and aria-controls to accordion-button
+    //$(this).find(".accordion-button").attr("data-bs-target", "#accordion_collapse_" + i).attr("aria-controls", "#accordion_collapse_" + i);
+    // Add dynamic id and aria-labelledby to accordion-collapse
+    //$(this).find(".accordion-collapse").attr("id", "accordion_collapse_" + i).attr("aria-labelledby", "heading_" + i);
   });
   
-  // First nav-link active
-  $('.bs-tabs .nav-item:first-child .nav-link').addClass('active');
+  // First item active
+  $('.bs-tabs .nav-link:first-child').addClass('active');
+  $('.bs-tabs .tab-content .tab-pane:first-child').addClass('show active')
 
   
 

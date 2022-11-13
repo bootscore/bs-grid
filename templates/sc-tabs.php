@@ -79,18 +79,25 @@ function bootscore_tabs($atts) {
   if ($query->have_posts()) { ?>
 
 <div class="bs-tabs mb-4">
-  
-  <ul class="nav nav-tabs">
+
+  <!-- tab-nav -->
+  <nav class="nav nav-tabs mb-3">
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#"><?php the_title(); ?></a>
-    </li>
+    <button class="nav-link" data-bs-toggle="tab"><?php the_title(); ?></button>
     <?php endwhile;
-        wp_reset_postdata(); ?>
-  </ul>
+      wp_reset_postdata(); ?>
+  </nav>
+
+  <!-- tab-content -->
+  <div class="tab-content">
+    <?php while ($query->have_posts()) : $query->the_post(); ?>
+    <div class="tab-pane fade"><?php the_excerpt(); ?></div>
+    <?php endwhile;
+      wp_reset_postdata(); ?>
+  </div>
 
 </div><!-- .bs-tabs -->
-  
+
 <?php $myvariable = ob_get_clean();
     return $myvariable;
   }

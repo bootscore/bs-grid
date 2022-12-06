@@ -91,7 +91,12 @@ function bootscore_tabs($atts) {
   <!-- tab-content -->
   <div class="tab-content">
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-    <div class="tab-pane fade"><?php the_excerpt(); ?></div>
+    <div class="tab-pane fade">
+      <!-- Featured Image-->
+      <?php bootscore_post_thumbnail(); ?>
+      <!-- Content -->
+      <?php the_content(); ?>
+    </div>
     <?php endwhile;
       wp_reset_postdata(); ?>
   </div>

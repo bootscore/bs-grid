@@ -1,7 +1,7 @@
  {
  	"name" : "bS Grid",
  	"version" : "5.2.3.0",
- 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/5.2.3.0/bs-grid-main.zip",
+ 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/v5.2.3.0/bs-grid-main.zip",
  	"sections" : {
  		"description" : "Added new tabs template."
  	}

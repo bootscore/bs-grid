@@ -88,7 +88,7 @@ function bootscore_accordion($atts) {
                 <?php the_title(); ?>
               </button>
             </h2>
-            <div class="accordion-collapse collapse" data-bs-parent=".accordion">
+            <div class="accordion-collapse collapse">
               <div class="accordion-body">
                 <!-- Featured Image-->
                 <?php bootscore_post_thumbnail(); ?>

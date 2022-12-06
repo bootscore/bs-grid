@@ -6,7 +6,7 @@
  *
  * @author 	  bootScore
  * @package   bS Grid
- * @version   5.2.2.0
+ * @version   5.2.3.0
 
 Post/Page/CPT Hero Grid Shortcodes
 

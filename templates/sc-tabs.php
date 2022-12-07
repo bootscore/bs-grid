@@ -26,7 +26,7 @@ Single items:
 */
 
 
-// Accordion Shortcode
+// Tabs Shortcode
 add_shortcode('bs-tabs', 'bootscore_tabs');
 function bootscore_tabs($atts) {
 
@@ -107,4 +107,4 @@ function bootscore_tabs($atts) {
     return $myvariable;
   }
 }
-// Accordion Shortcode End
+// Tabs Shortcode End

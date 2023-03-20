@@ -91,44 +91,44 @@ function bootscore_grid($atts) {
             </a>
           <?php endif; ?>
           
-            <div class="card-body d-flex flex-column">
+          <div class="card-body d-flex flex-column">
 
-              <?php bootscore_category_badge(); ?>
+            <?php bootscore_category_badge(); ?>
 
+            <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+              <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
+            </a>
+
+            <?php if ('post' === get_post_type()) : ?>
+              <p class="meta small mb-2 text-muted">
+                <?php
+                  bootscore_date();
+                  bootscore_author();
+                  bootscore_comments();
+                  bootscore_edit();
+                ?>
+              </p>
+            <?php endif; ?>
+
+            <p class="card-text">
               <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
+                <?php echo strip_tags(get_the_excerpt()); ?>
               </a>
-              
-              <?php if ('post' === get_post_type()) : ?>
-                <p class="meta small mb-2 text-muted">
-                  <?php
-                    bootscore_date();
-                    bootscore_author();
-                    bootscore_comments();
-                    bootscore_edit();
-                  ?>
-                </p>
-              <?php endif; ?>
+            </p>
 
-              <p class="card-text">
-                <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                  <?php echo strip_tags(get_the_excerpt()); ?>
-                </a>
-              </p>
+            <p class="card-text mt-auto">
+              <a class="read-more" href="<?php the_permalink(); ?>">
+                <?php _e('Read more »', 'bootscore'); ?>
+              </a>
+            </p>
 
-              <p class="card-text mt-auto">
-                <a class="read-more" href="<?php the_permalink(); ?>">
-                  <?php _e('Read more »', 'bootscore'); ?>
-                </a>
-              </p>
+            <?php bootscore_tags(); ?>
 
-              <?php bootscore_tags(); ?>
-              
-            </div>
-          
           </div>
-        
+          
         </div>
+        
+      </div>
       
       <?php endwhile;
       wp_reset_postdata(); ?>

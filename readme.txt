@@ -102,8 +102,6 @@ Post/Page/CPT Grid/List Shortcodes
     
 == Changelog ==
 
-Improved loop cards
-
     = 5.3.0 - March 31 2023 =
 
         * [IMPROVEMENT] Loop cards

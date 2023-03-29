@@ -1,12 +1,12 @@
 <?php
 /*
- * Grid template.
+ * Accordion template.
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-accordion.php
  *
  * @author 	  bootScore
  * @package   bS Grid
- * @version   5.2.3.0
+ * @version   5.3.0
 
 Post/Page/CPT Hero Grid Shortcodes
 

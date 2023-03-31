@@ -6,7 +6,7 @@
  *
  * @author 	  bootScore
  * @package   bS Grid
- * @version   5.2.1.0
+ * @version   5.3.0
 
 Post/Page/CPT List Shortcodes
 

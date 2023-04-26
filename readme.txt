@@ -3,9 +3,9 @@
 Contributors: Bastian Kreiter, torricelli
 
 Requires at least: 4.5
-Tested up to: 6.0
+Tested up to: 6.2
 Requires PHP: 5.6
-Stable tag: 5.3.0
+Stable tag: 5.3.1
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
@@ -102,14 +102,18 @@ Post/Page/CPT Grid/List Shortcodes
     
 == Changelog ==
 
+    = 5.3.1 - April 26 2023 =
+
+        * [IMPROVEMENT] Replace PHP echo's with shorthand
+
     = 5.3.0 - March 31 2023 =
 
         * [IMPROVEMENT] Loop cards
 
     = 5.2.3.0 - December 06 2022 =
 
-        * [IMPROVEMENT] Removed data-bs-parent from Accordion #11
-        * [NEW] Tabs template #13
+        * [IMPROVEMENT] Removed data-bs-parent from Accordion
+        * [NEW] Tabs template
 
     = 5.2.2.0 - July 04 2022 =
     

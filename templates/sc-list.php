@@ -6,7 +6,7 @@
  *
  * @author 	  bootScore
  * @package   bS Grid
- * @version   5.3.0
+ * @version   5.3.1
 
 Post/Page/CPT List Shortcodes
 
@@ -113,7 +113,7 @@ function bootscore_list($atts) {
 
               <p class="card-text">
                 <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                  <?php echo strip_tags(get_the_excerpt()); ?>
+                  <?= strip_tags(get_the_excerpt()); ?>
                 </a>
               </p>
 

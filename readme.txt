@@ -5,7 +5,7 @@ Contributors: Bastian Kreiter, torricelli
 Requires at least: 4.5
 Tested up to: 6.2
 Requires PHP: 5.6
-Stable tag: 5.3.2
+Stable tag: 5.3.1
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 

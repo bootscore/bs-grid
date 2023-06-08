@@ -3,9 +3,9 @@
 Contributors: Bastian Kreiter, torricelli
 
 Requires at least: 4.5
-Tested up to: 6.2
+Tested up to: 6.2.2
 Requires PHP: 5.6
-Stable tag: 5.3.1
+Stable tag: 5.3.2
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
@@ -101,6 +101,10 @@ Post/Page/CPT Grid/List Shortcodes
 
     
 == Changelog ==
+
+    = 5.3.2 - June 08 2023 =
+
+        * [FEATURE] Add composer.json
 
     = 5.3.1 - April 26 2023 =
 

@@ -1,0 +1,27 @@
+{
+    "name": "bootscore/bs-grid",
+    "description": "Grid for bootScore",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "The Bootscore Authors"
+        }
+    ],
+    "readme": "README.md",
+    "homepage": "https://bootscore.me/",
+    "support": {
+      "issues": "https://github.com/bootscore/bs-grid/issues",
+      "forum": "https://github.com/bootscore/bootscore/discussions",
+      "source": "https://github.com/bootscore/bs-grid",
+      "docs": "https://bootscore.me/documentation/bs-grid/"
+    },
+    "minimum-stability": "stable",
+    "keywords": [
+      "wordpress",
+      "plugin",
+      "bootscore",
+      "bootstrap",
+      "grid"
+    ]
+}

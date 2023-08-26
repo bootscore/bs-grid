@@ -2,15 +2,16 @@
 
 Contributors: Bastian Kreiter, torricelli
 
-Requires at least: 4.5
-Tested up to: 6.2.2
+Stable tag: 5.3.3
+Tested up to: 6.3
+Requires at least: 5.0
 Requires PHP: 5.6
-Stable tag: 5.3.2
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
 Post / Page / Custom Post Type Grid, List or Hero for bootScore WordPress Theme, Copyright 2020 - 2022 The bootScore Contributors.
 
+License URI: https://github.com/bootscore/bs-swiper/blob/main/LICENSE
 
 == Credits ==
 
@@ -101,6 +102,12 @@ Post/Page/CPT Grid/List Shortcodes
 
     
 == Changelog ==
+
+    = 5.3.3 - August 26 2023 =
+    
+        * [BUGFIX] Hero tag badges #19
+        * [IMPROVEMENT] Deny direct access #20
+        * [UPDATE] Plugin update checker #21
 
     = 5.3.2 - June 08 2023 =
 

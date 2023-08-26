@@ -34,8 +34,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Hero Shortcode
 add_shortcode('bs-hero', 'bootscore_hero');
-function bootscore_hero($atts)
-{
+function bootscore_hero($atts) {
 
   ob_start();
   extract(shortcode_atts(array(

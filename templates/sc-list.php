@@ -1,29 +1,35 @@
 <?php
+
 /*
  * List template.
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-list.php
  *
- * @author 	  bootScore
- * @package   bS Grid
- * @version   5.3.1
-
-Post/Page/CPT List Shortcodes
-
-Posts: 
-[bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-
-Child-pages: 
-[bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
-
-Custom post types:
-[bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
-
-Single items:
-[bs-list type="post" id="1, 15"]
-[bs-list type="page" id="2, 25"]
-[bs-list type="isotope" id="33, 31"]
+ * @author   bootScore
+ * @package  bS Grid
+ * @version  5.3.3
+ *
+ * Post/Page/CPT List Shortcodes
+ *
+ * Posts: 
+ * [bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+ *
+ * Child-pages: 
+ * [bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+ *
+ * Custom post types:
+ * [bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+ *
+ * Single items:
+ * [bs-list type="post" id="1, 15"]
+ * [bs-list type="page" id="2, 25"]
+ * [bs-list type="isotope" id="33, 31"]
+ *
 */
+
+
+// Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 
 // List Shortcode
@@ -137,5 +143,3 @@ function bootscore_list($atts) {
     return $myvariable;
   }
 }
-
-// List Shortcode End

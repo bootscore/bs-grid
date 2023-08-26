@@ -1,29 +1,35 @@
 <?php
+
 /*
  * Accordion template.
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-accordion.php
  *
- * @author 	  bootScore
- * @package   bS Grid
- * @version   5.3.0
-
-Post/Page/CPT Hero Grid Shortcodes
-
-Posts: 
-[bs-accordion type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-
-Child-pages: 
-[bs-accordion type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
-
-Custom post types:
-[bs-accordion type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
-
-Single items:
-[bs-accordion type="post" id="1, 15"]
-[bs-accordion type="page" id="2, 25"]
-[bs-accordion type="isotope" id="33, 31"]
+ * @author   bootScore
+ * @package  bS Grid
+ * @version  5.3.3
+ * 
+ * Post/Page/CPT Accordion Shortcodes
+ *
+ * Posts: 
+ * [bs-accordion type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+ *
+ * Child-pages: 
+ * [bs-accordion type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+ *
+ * Custom post types:
+ * [bs-accordion type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+ *
+ * Single items:
+ * [bs-accordion type="post" id="1, 15"]
+ * [bs-accordion type="page" id="2, 25"]
+ * [bs-accordion type="isotope" id="33, 31"]
+ *
 */
+
+
+// Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 
 // Accordion Shortcode
@@ -107,4 +113,3 @@ function bootscore_accordion($atts) {
     return $myvariable;
   }
 }
-// Accordion Shortcode End

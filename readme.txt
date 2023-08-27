@@ -2,7 +2,7 @@
 
 Contributors: Bastian Kreiter, torricelli
 
-Stable tag: 5.3.3
+Stable tag: 5.3.4
 Tested up to: 6.3
 Requires at least: 5.0
 Requires PHP: 5.6

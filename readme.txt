@@ -103,6 +103,10 @@ Post/Page/CPT Grid/List Shortcodes
     
 == Changelog ==
 
+    = 5.3.4 - August 27 2023 =
+    
+        * [BUGFIX] Downgrade to plugin checker v4
+
     = 5.3.3 - August 26 2023 =
     
         * [BUGFIX] Hero tag badges #19

@@ -1,8 +1,8 @@
  {
  	"name" : "bS Grid",
- 	"version" : "5.3.3",
- 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/v5.3.3/bs-grid-main.zip",
+ 	"version" : "5.3.4",
+ 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/v5.3.4/bs-grid-main.zip",
  	"sections" : {
- 		"description" : "Deny direct access"
+ 		"description" : "Add composer.json"
  	}
  }

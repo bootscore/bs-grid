@@ -24,6 +24,12 @@
  * [bs-list type="post" id="1, 15"]
  * [bs-list type="page" id="2, 25"]
  * [bs-list type="isotope" id="33, 31"]
+ * 
+ * Optional:
+ * Add the following attributes to disable excerpt, tags, or categories
+ * excerpt="false"
+ * tags="false"
+ * categories="false"
  *
 */
 
@@ -46,7 +52,10 @@ function bootscore_list($atts) {
     'post_parent'    => '',
     'tax' => '',
     'terms' => '',
-    'id' => ''
+    'id' => '',
+    'excerpt' => 'true',
+    'tags' => 'true',
+    'categories' => 'true',
   ), $atts));
 
   $options = array(
@@ -100,7 +109,9 @@ function bootscore_list($atts) {
           <div class="col">
             <div class="card-body">
 
-              <?php bootscore_category_badge(); ?>
+              <?php if ($categories == 'true') : ?>
+                <?php bootscore_category_badge(); ?>
+              <?php endif; ?>
 
               <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
                 <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
@@ -119,7 +130,13 @@ function bootscore_list($atts) {
 
               <p class="card-text">
                 <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                  <?= strip_tags(get_the_excerpt()); ?>
+                  <?php if ($excerpt == 'true') : ?>
+                    <p class="card-text">
+                      <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                        <?= strip_tags(get_the_excerpt()); ?>
+                      </a>
+                    </p>
+                  <?php endif; ?>
                 </a>
               </p>
 
@@ -129,7 +146,9 @@ function bootscore_list($atts) {
                 </a>
               </p>
 
-              <?php bootscore_tags(); ?>
+              <?php if ($tags == 'true') : ?>
+                <?php bootscore_tags(); ?>
+              <?php endif; ?>
 
             </div>
           </div>

@@ -24,6 +24,12 @@
  * [bs-hero type="post" id="1, 15"]
  * [bs-hero type="page" id="2, 25"]
  * [bs-hero type="isotope" id="33, 31"]
+ * 
+ * Optional:
+ * Add the following attributes to disable excerpt, tags, or categories
+ * excerpt="false"
+ * tags="false"
+ * categories="false"
  *
 */
 
@@ -46,7 +52,10 @@ function bootscore_hero($atts) {
     'post_parent'    => '',
     'tax' => '',
     'terms' => '',
-    'id' => ''
+    'id' => '',
+    'excerpt' => 'true',
+    'tags' => 'true',
+    'categories' => 'true',
   ), $atts));
 
   $options = array(
@@ -92,7 +101,9 @@ function bootscore_hero($atts) {
           <div class="container h-100 d-flex flex-column">
             <div class="mt-auto text-white mb-5 text-center">
               <!-- Category badge -->
-              <?php bootscore_category_badge(); ?>
+              <?php if ($categories == 'true') : ?>
+                <?php bootscore_category_badge(); ?>
+              <?php endif; ?>
               <!-- Title -->
               <h2 class="blog-post-title">
                 <a class="text-white" href="<?php the_permalink(); ?>">
@@ -100,12 +111,18 @@ function bootscore_hero($atts) {
                 </a>
               </h2>
               <!-- Excerpt & Read more -->
-              <div class="card-text">
-                <?php the_excerpt(); ?>
-              </div>
+              <?php if ($excerpt == 'true') : ?>
+                <p class="card-text">
+                  <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                    <?= strip_tags(get_the_excerpt()); ?>
+                  </a>
+                </p>
+              <?php endif; ?>
               <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
               <!-- Tags -->
-              <?php bootscore_tags(); ?>
+              <?php if ($tags == 'true') : ?>
+                <?php bootscore_tags(); ?>
+              <?php endif; ?>
             </div>
           </div>
         </div>

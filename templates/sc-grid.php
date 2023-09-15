@@ -24,6 +24,12 @@
  * [bs-grid type="post" id="1, 15"]
  * [bs-grid type="page" id="2, 25"]
  * [bs-grid type="isotope" id="33, 31"]
+ * 
+ * Optional:
+ * Add the following attributes to disable excerpt, tags, or categories
+ * excerpt="false"
+ * tags="false"
+ * categories="false"
  *
 */
 
@@ -46,7 +52,10 @@ function bootscore_grid($atts) {
     'post_parent'    => '',
     'tax' => '',
     'terms' => '',
-    'id' => ''
+    'id' => '',
+    'excerpt' => 'true',
+    'tags' => 'true',
+    'categories' => 'true',
   ), $atts));
 
   $options = array(
@@ -99,7 +108,9 @@ function bootscore_grid($atts) {
           
           <div class="card-body d-flex flex-column">
 
-            <?php bootscore_category_badge(); ?>
+            <?php if ($categories == 'true') : ?>
+              <?php bootscore_category_badge(); ?>
+            <?php endif; ?>
 
             <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
               <?php the_title('<h2 class="blog-post-title h5">', '</h2>'); ?>
@@ -116,11 +127,13 @@ function bootscore_grid($atts) {
               </p>
             <?php endif; ?>
 
-            <p class="card-text">
-              <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                <?= strip_tags(get_the_excerpt()); ?>
-              </a>
-            </p>
+            <?php if ($excerpt == 'true') : ?>
+              <p class="card-text">
+                <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                  <?= strip_tags(get_the_excerpt()); ?>
+                </a>
+              </p>
+            <?php endif; ?>
 
             <p class="card-text mt-auto">
               <a class="read-more" href="<?php the_permalink(); ?>">
@@ -128,7 +141,9 @@ function bootscore_grid($atts) {
               </a>
             </p>
 
-            <?php bootscore_tags(); ?>
+            <?php if ($tags == 'true') : ?>
+              <?php bootscore_tags(); ?>
+            <?php endif; ?>
 
           </div>
           

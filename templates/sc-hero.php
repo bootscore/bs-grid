@@ -7,7 +7,7 @@
  *
  * @author   bootScore
  * @package  bS Grid
- * @version  5.3.3
+ * @version  5.4.0
  *
  * Post/Page/CPT Hero Shortcodes
  *
@@ -94,7 +94,7 @@ function bootscore_hero($atts) {
   if ($query->have_posts()) { ?>
 
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-      <div class="bs-grid-hero position-relative bg-dark mb-4 rounded">
+      <div class="bs-grid-hero position-relative bg-dark mb-4 rounded tags-heading-none">
         <!-- Featured Image-->
         <?php the_post_thumbnail('full', array('class' => 'grid-hero-img rounded')); ?>
         <div class="position-absolute top-0 end-0 bottom-0 start-0">
@@ -113,13 +113,15 @@ function bootscore_hero($atts) {
               <!-- Excerpt & Read more -->
               <?php if ($excerpt == 'true') : ?>
                 <p class="card-text">
-                  <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                  <a class="text-white text-decoration-none" href="<?php the_permalink(); ?>">
                     <?= strip_tags(get_the_excerpt()); ?>
                   </a>
                 </p>
               <?php endif; ?>
-              <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
-              <!-- Tags -->
+              <p class="card-text">
+                <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+              </p>
+                <!-- Tags -->
               <?php if ($tags == 'true') : ?>
                 <?php bootscore_tags(); ?>
               <?php endif; ?>

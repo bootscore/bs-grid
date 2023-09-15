@@ -1,8 +1,0 @@
-/* Fix tags in hero template */
-.bs-grid-hero .tags-heading {
-  display: none;
-}
-
-.bs-grid-hero .tags-links {
-  margin-top: 1rem;
-}

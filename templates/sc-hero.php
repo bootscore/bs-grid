@@ -94,7 +94,7 @@ function bootscore_hero($atts) {
   if ($query->have_posts()) { ?>
 
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-      <div class="bs-grid-hero position-relative bg-dark mb-4 rounded">
+      <div class="bs-grid-hero position-relative bg-dark mb-4 rounded tags-heading-none">
         <!-- Featured Image-->
         <?php the_post_thumbnail('full', array('class' => 'grid-hero-img rounded')); ?>
         <div class="position-absolute top-0 end-0 bottom-0 start-0">

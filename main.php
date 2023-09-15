@@ -30,8 +30,6 @@ function bs_grid_scripts(){
 
   wp_enqueue_script('bs-grid-js', plugins_url('/js/bs-grid.js', __FILE__), array(), false, true);
   
-  wp_register_style('bs-grid-css', plugins_url('css/bs-grid.css', __FILE__));
-  wp_enqueue_style('bs-grid-css');
 }
 add_action('wp_enqueue_scripts', 'bs_grid_scripts');
 

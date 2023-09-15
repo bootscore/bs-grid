@@ -1,6 +1,6 @@
 === bS Grid ===
 
-Contributors: Bastian Kreiter, torricelli
+Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
 Stable tag: 5.3.4
 Tested up to: 6.3

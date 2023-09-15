@@ -113,7 +113,7 @@ function bootscore_hero($atts) {
               <!-- Excerpt & Read more -->
               <?php if ($excerpt == 'true') : ?>
                 <p class="card-text">
-                  <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                  <a class="text-white text-decoration-none" href="<?php the_permalink(); ?>">
                     <?= strip_tags(get_the_excerpt()); ?>
                   </a>
                 </p>

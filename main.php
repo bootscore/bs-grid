@@ -32,7 +32,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
  */
 function bs_grid_scripts(){
 
-  wp_enqueue_script('bs-grid-js', plugins_url('/js/bs-grid.js', __FILE__), array(), false, true);
+  wp_enqueue_script('bs-grid-js', plugins_url('/js/bs-grid.min.js', __FILE__), array(), false, true);
   
 }
 add_action('wp_enqueue_scripts', 'bs_grid_scripts');

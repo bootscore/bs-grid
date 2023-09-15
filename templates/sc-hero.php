@@ -118,8 +118,10 @@ function bootscore_hero($atts) {
                   </a>
                 </p>
               <?php endif; ?>
-              <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
-              <!-- Tags -->
+              <p class="card-text">
+                <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+              </p>
+                <!-- Tags -->
               <?php if ($tags == 'true') : ?>
                 <?php bootscore_tags(); ?>
               <?php endif; ?>

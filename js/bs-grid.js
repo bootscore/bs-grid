@@ -1,4 +1,3 @@
-
 // Accordion
 document.querySelectorAll('.bs-accordion').forEach(function (accordion, i) {
   // Add dynamic id's to accordion
@@ -18,7 +17,6 @@ document.querySelectorAll('.bs-accordion .accordion-item').forEach(function (ite
   item.querySelector(".accordion-collapse").setAttribute("aria-labelledby", "heading_" + i);
 });
 
-
 // Tabs  
 document.querySelectorAll('.bs-tabs .nav.nav-tabs .nav-link').forEach(function (link, i) {
   // Add dynamic data-bs-target and aria-controls to nav-tabs
@@ -32,9 +30,36 @@ document.querySelectorAll('.bs-tabs .tab-content .tab-pane').forEach(function (p
   pane.setAttribute("aria-labelledby", "tab_content_" + i);
 });
 
-// First item active
-document.querySelector('.bs-tabs .nav-link:first-child').classList.add('active');
-document.querySelector('.bs-tabs .tab-content .tab-pane:first-child').classList.add('show', 'active');
+/*
+// First item active if it exists
+const firstNavLink = document.querySelector('.bs-tabs .nav-link:first-child');
+if (firstNavLink) {
+  firstNavLink.classList.add('active');
+}
+
+const firstTabPane = document.querySelector('.bs-tabs .tab-content .tab-pane:first-child');
+if (firstTabPane) {
+  firstTabPane.classList.add('show', 'active');
+}
+*/
+
+// First item active if it exists
+// Handle each instance of tabs separately
+document.querySelectorAll('.bs-tabs').forEach(function (tabs) {
+  const firstNavLink = tabs.querySelector('.nav-link:first-child');
+  const firstTabPane = tabs.querySelector('.tab-content .tab-pane:first-child');
+  
+  if (firstNavLink) {
+    firstNavLink.classList.add('active');
+  }
+
+  if (firstTabPane) {
+    firstTabPane.classList.add('show', 'active');
+  }
+});
+
+
+
 
 
 

@@ -38,7 +38,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - `orderby=""` date, title, or rand
 - `posts=""` amount of posts to show
 
-##### Additional
+##### Additional `bs-grid`, `bs-list` and `bs-hero`
 - `excerpt="false"` hide excerpt
 - `tags="false"` hide tags
 - `categories="false"` hide categories

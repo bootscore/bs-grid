@@ -146,11 +146,11 @@ Edit files in an upgrade-safe way using overrides. Copy the template into a dire
 The copied file will now override the bS Grid template file. Change cards, classes or HTML as you want.
 
 ### Templates that can be overridden
-- sc-grid.php
-- sc-list.php
-- sc-hero.php
-- sc-accordion.php
-- sc-tabs.php
+- `sc-grid.php`
+- `sc-list.php`
+- `sc-hero.php`
+- `sc-accordion.php`
+- `sc-tabs.php`
 
 ## License & Credits
 - bS Grid, MIT License https://github.com/bootscore/bs-grid/blob/main/LICENSE

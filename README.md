@@ -67,7 +67,7 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 ```
 
 #### Options
-- `id=""` id of post, multiple ids separated by comma 
+- `id=""` post id, multiple ids separated by comma 
 - `order=""` ASC or DESC
 - `orderby=""` date, title, or rand
 
@@ -79,15 +79,20 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 ## Pages
 
 ### Shortcode to show child-pages by parent-page id
-`[bs-* type="page" post_parent="21" order="ASC" orderby="title" posts="6"]`
+```
+[bs-* type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+```
 
 Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 
 #### Options
-- post_parent: id of parent-page
-- order: ASC or DESC
-- orderby: date, title, or rand
-- posts: amount of pages to show
+- `post_parent=""` parent-page id
+- `order=""` ASC or DESC
+- `orderby=""` date, title, or rand
+- `posts=""` amount of pages
+
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
+- `excerpt="false"` hide excerpt
 
 ### Shortcode to show single pages by id
 `[bs-* type="page" id="2, 25"]`

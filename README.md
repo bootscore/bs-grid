@@ -95,10 +95,17 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 - `excerpt="false"` hide excerpt
 
 ### Shortcode to show single pages by id
-`[bs-* type="page" id="2, 25"]`
+```
+[bs-* type="page" id="2, 25"]
+```
 
 #### Options
-- id: id of page, multiple ids separated by comma 
+- `id=""` page id, multiple ids separated by comma 
+- `order=""` ASC or DESC
+- `orderby=""` date, title, or rand
+
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
+- `excerpt="false"` hide excerpt
 
 ## Custom Post Types
 

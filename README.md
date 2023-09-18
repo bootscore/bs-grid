@@ -110,21 +110,33 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 ## Custom Post Types
 
 ### Shortcode to show custom-post-types by terms
-`[bs-* type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]`
+```
+[bs-* type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+```
 
 #### Options:
-- type: type of custom-post-type
-- tax: taxonomy
-- terms: terms-slug, multiple terms separated by comma
-- order: ASC or DESC
-- orderby: date, title, or rand
-- posts: amount of custom-post-types to show 
+- `type=""` type of custom-post-type
+- `tax=""` taxonomy
+- `terms=""` terms-slug, multiple terms separated by comma
+- `order=""` ASC or DESC
+- `orderby=""` date, title, or rand
+- `posts=""` amount of custom-post-types
+
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
+- `excerpt="false"` hide excerpt
 
 ### Shortcode to show single custom-post-types by id
-`[bs-* type="isotope" id="33, 31"]`
+```
+[bs-* type="isotope" id="33, 31"]
+```
 
 #### Options
-- id: id of custom-post-type, multiple ids separated by comma 
+- `id=""` custom-post-type's id, multiple ids separated by comma 
+- `order=""` ASC or DESC
+- `orderby=""` date, title, or rand
+
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
+- `excerpt="false"` hide excerpt
 
 ## Overriding templates via theme
 Template files can be found within the **/bs-grid-main/templates/** plugin directory.

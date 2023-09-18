@@ -111,7 +111,7 @@ Post/Page/CPT Grid/List Shortcodes
 
 == Changelog ==
 
-    = 5.4.0 - September 18 2023 =
+    = 5.4.0 - September 19 2023 =
 
         * [FEATURE] Ability to disable certain information #24
         * [IMPROVEMENT] Delete enqueued CSS file and add tags-heading-none class to hero 20cb295

@@ -16,7 +16,8 @@ WordPress plugin to show posts, pages or custom-post-types in grid / list cards,
 
 Select template you want to use by replacing `bs-*` placeholder in shortcode examples.
 
-`[bs-grid]`
+```[bs-grid]
+```
 
 - `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards.
 - `bs-list` shows items in 1 column vertical cards (md) and flip into 1 column horizontal cards (lg).
@@ -37,8 +38,15 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - `orderby=""` date, title, or rand
 - `posts=""` amount of posts to show
 
+##### Additional
+- `excerpt="false"` hide excerpt
+- `tags="false"` hide tags
+- `categories="false"` hide categories
+
 ### Shortcode to show posts by tags
-`[bs-* type="post" tax="post_tag" terms="bikes, motorbikes" order="DESC" orderby="date" posts="5"]`
+```
+[bs-* type="post" tax="post_tag" terms="bikes, motorbikes" order="DESC" orderby="date" posts="5"]
+```
 
 #### Options
 - tax: taxonomy (post_tag)

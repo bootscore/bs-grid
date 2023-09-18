@@ -16,7 +16,8 @@ WordPress plugin to show posts, pages or custom-post-types in grid / list cards,
 
 Select template you want to use by replacing `bs-*` placeholder in shortcode examples.
 
-```[bs-grid]
+```
+[bs-grid]
 ```
 
 - `bs-grid` shows items in 4 (xxl), 3 (lg), 2 (md) and 1 (sm) column cards.
@@ -36,9 +37,9 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - `category=""` category-slug, multiple categories separated by comma
 - `order=""` ASC or DESC
 - `orderby=""` date, title, or rand
-- `posts=""` amount of posts to show
+- `posts=""` amount of posts
 
-##### Additional `bs-grid`, `bs-list` and `bs-hero`
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
 - `excerpt="false"` hide excerpt
 - `tags="false"` hide tags
 - `categories="false"` hide categories
@@ -49,11 +50,16 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 ```
 
 #### Options
-- tax: taxonomy (post_tag)
-- terms: tags-slug, multiple terms separated by comma
-- order: ASC or DESC
-- orderby: date, title, or rand
-- posts: amount of posts to show
+- `tax=""` taxonomy (post_tag)
+- `terms=""` tags-slug, multiple terms separated by comma
+- `order=""` ASC or DESC
+- `orderby=""` date, title, or rand
+- `posts=""` amount of posts
+
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
+- `excerpt="false"` hide excerpt
+- `tags="false"` hide tags
+- `categories="false"` hide categories
 
 ### Shortcode to show single posts by id
 `[bs-* type="post" id="1, 15"]`

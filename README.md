@@ -62,10 +62,19 @@ Select template you want to use by replacing `bs-*` placeholder in shortcode exa
 - `categories="false"` hide categories
 
 ### Shortcode to show single posts by id
-`[bs-* type="post" id="1, 15"]`
+```
+[bs-* type="post" id="1, 15"]
+```
 
 #### Options
-- id: id of post, multiple ids separated by comma 
+- `id=""` id of post, multiple ids separated by comma 
+- `order=""` ASC or DESC
+- `orderby=""` date, title, or rand
+
+##### Additional options `bs-grid`, `bs-list` and `bs-hero`
+- `excerpt="false"` hide excerpt
+- `tags="false"` hide tags
+- `categories="false"` hide categories
 
 ## Pages
 

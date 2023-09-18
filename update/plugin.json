@@ -1,8 +1,8 @@
  {
  	"name" : "bS Grid",
- 	"version" : "5.3.4",
- 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/v5.3.4/bs-grid-main.zip",
+ 	"version" : "5.4.0",
+ 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/v5.4.0/bs-grid-main.zip",
  	"sections" : {
- 		"description" : "Downgrade to update checker v4"
+ 		"description" : "Ability to disable certain information and switch to Vanilla JS"
  	}
  }

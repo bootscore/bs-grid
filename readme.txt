@@ -2,10 +2,10 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.3.4
-Tested up to: 6.3
+Stable tag: 5.4.0
+Tested up to: 6.3.1
 Requires at least: 5.0
-Requires PHP: 5.6
+Requires PHP: 7.4
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
@@ -76,10 +76,10 @@ Post/Page/CPT Grid/List Shortcodes
     orderby: date or title
     posts: number of posts to display 
 
-
   = Single items by id =
   
     Posts
+    
     [bs-grid type="post" id="1, 15"]
     [bs-list type="post" id="1, 15"]
     [bs-hero type="post" id="1, 15"]
@@ -87,6 +87,7 @@ Post/Page/CPT Grid/List Shortcodes
     [bs-tabs type="post" id="1, 15"]
     
     Pages
+    
     [bs-grid type="page" id="2, 25"]
     [bs-list type="page" id="2, 25"]
     [bs-hero type="page" id="2, 25"]
@@ -94,14 +95,27 @@ Post/Page/CPT Grid/List Shortcodes
     [bs-tabs type="page" id="2, 25"]
     
     Custom post types
+    
     [bs-grid type="isotope" id="33, 31"]
     [bs-list type="isotope" id="33, 31"]
     [bs-hero type="isotope" id="33, 31"]
     [bs-accordion type="isotope" id="33, 31"]
     [bs-tabs type="isotope" id="33, 31"]
-
     
+    Options for posts using [bs-grid] or [bs-template]
+    
+    categories="false" hide categories badges
+    excerpt="false" hide excerpt
+    tags="false" hide tags badges
+
+
 == Changelog ==
+
+    = 5.4.0 - September 19 2023 =
+
+        * [FEATURE] Ability to disable certain information #24
+        * [IMPROVEMENT] Delete enqueued CSS file and add tags-heading-none class to hero 20cb295
+        * [IMPROVEMENT] Switch to Vanilla JS #26
 
     = 5.3.4 - August 27 2023 =
     

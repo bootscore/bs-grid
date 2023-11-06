@@ -43,7 +43,7 @@ add_shortcode('bs-hero', 'bootscore_hero');
 function bootscore_hero($atts) {
 
   ob_start();
-  extract(shortcode_atts(array(
+  $atts = shortcode_atts(array(
     'type' => 'post',
     'order' => 'date',
     'orderby' => 'date',
@@ -56,19 +56,19 @@ function bootscore_hero($atts) {
     'excerpt' => 'true',
     'tags' => 'true',
     'categories' => 'true',
-  ), $atts));
+  ), $atts);
 
   $options = array(
-    'post_type' => $type,
-    'order' => $order,
-    'orderby' => $orderby,
-    'posts_per_page' => $posts,
-    'category_name' => $category,
-    'post_parent' => $post_parent,
+    'post_type' => sanitize_text_field($atts['type']),
+    'order' => sanitize_text_field($atts['order']),
+    'orderby' => sanitize_text_field($atts['orderby']),
+    'posts_per_page' => is_numeric($atts['posts']) ? (int) $atts['posts'] : -1,
+    'category_name' => sanitize_text_field($atts['category']),
+    'post_parent' => is_numeric($atts['post_parent']) ? (int) $atts['post_parent'] : '',
   );
 
-  $tax = trim($tax);
-  $terms = trim($terms);
+  $tax = trim(sanitize_text_field($atts['tax']));
+  $terms = trim(sanitize_text_field($atts['terms']));
   if ($tax != '' && $terms != '') {
     $terms = explode(',', $terms);
     $terms = array_map('trim', $terms);
@@ -82,8 +82,8 @@ function bootscore_hero($atts) {
     ));
   }
 
-  if ($id != '') {
-    $ids = explode(',', $id);
+  if ($atts['id'] != '') {
+    $ids = explode(',', sanitize_text_field($atts['id']));
     $ids = array_map('intval', $ids);
     $ids = array_filter($ids);
     $ids = array_unique($ids);
@@ -101,7 +101,7 @@ function bootscore_hero($atts) {
           <div class="container h-100 d-flex flex-column">
             <div class="mt-auto text-white mb-5 text-center">
               <!-- Category badge -->
-              <?php if ($categories == 'true') : ?>
+              <?php if ($atts['categories'] == 'true') : ?>
                 <?php bootscore_category_badge(); ?>
               <?php endif; ?>
               <!-- Title -->
@@ -111,7 +111,7 @@ function bootscore_hero($atts) {
                 </a>
               </h2>
               <!-- Excerpt & Read more -->
-              <?php if ($excerpt == 'true') : ?>
+              <?php if ($atts['excerpt'] == 'true') : ?>
                 <p class="card-text">
                   <a class="text-white text-decoration-none" href="<?php the_permalink(); ?>">
                     <?= strip_tags(get_the_excerpt()); ?>
@@ -122,7 +122,7 @@ function bootscore_hero($atts) {
                 <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
               </p>
                 <!-- Tags -->
-              <?php if ($tags == 'true') : ?>
+              <?php if ($atts['tags'] == 'true') : ?>
                 <?php bootscore_tags(); ?>
               <?php endif; ?>
             </div>

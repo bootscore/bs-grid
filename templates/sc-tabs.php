@@ -37,7 +37,7 @@ add_shortcode('bs-tabs', 'bootscore_tabs');
 function bootscore_tabs($atts) {
 
   ob_start();
-  extract(shortcode_atts(array(
+  $atts = shortcode_atts(array(
     'type' => 'post',
     'order' => 'date',
     'orderby' => 'date',
@@ -47,19 +47,19 @@ function bootscore_tabs($atts) {
     'tax' => '',
     'terms' => '',
     'id' => ''
-  ), $atts));
+  ), $atts);
 
   $options = array(
-    'post_type' => $type,
-    'order' => $order,
-    'orderby' => $orderby,
-    'posts_per_page' => $posts,
-    'category_name' => $category,
-    'post_parent' => $post_parent,
+    'post_type' => sanitize_text_field($atts['type']),
+    'order' => sanitize_text_field($atts['order']),
+    'orderby' => sanitize_text_field($atts['orderby']),
+    'posts_per_page' => is_numeric($atts['posts']) ? (int) $atts['posts'] : -1,
+    'category_name' => sanitize_text_field($atts['category']),
+    'post_parent' => is_numeric($atts['post_parent']) ? (int) $atts['post_parent'] : '',
   );
 
-  $tax = trim($tax);
-  $terms = trim($terms);
+  $tax = trim(sanitize_text_field($atts['tax']));
+  $terms = trim(sanitize_text_field($atts['terms']));
   if ($tax != '' && $terms != '') {
     $terms = explode(',', $terms);
     $terms = array_map('trim', $terms);
@@ -73,8 +73,8 @@ function bootscore_tabs($atts) {
     ));
   }
 
-  if ($id != '') {
-    $ids = explode(',', $id);
+  if ($atts['id'] != '') {
+    $ids = explode(',', sanitize_text_field($atts['id']));
     $ids = array_map('intval', $ids);
     $ids = array_filter($ids);
     $ids = array_unique($ids);

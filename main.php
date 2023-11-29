@@ -19,12 +19,17 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Update checker
  */
-require 'update/update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-  'https://bootscore.me/wp-content/plugins/bs-grid-main/update/plugin.json',
-  __FILE__, //Full path to the main plugin file or functions.php.
-  'bs-grid-main'
+require 'update/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/bootscore/bs-grid/',
+	__FILE__,
+	'bs-grid'
 );
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
 
 
 /**

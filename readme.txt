@@ -2,8 +2,8 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.4.0
-Tested up to: 6.3.1
+Stable tag: 5.5.0
+Tested up to: 6.4.1
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
@@ -110,6 +110,12 @@ Post/Page/CPT Grid/List Shortcodes
 
 
 == Changelog ==
+
+= 5.5.0 - November 30 2023 =
+
+* [IMPROVEMENT] Removed extract function and increase security #28 (@DogByteMarketing)
+* [BUGFIX]Possibility to get non published posts #29 (@DogByteMarketing)
+* [UPDATE] Update checker #30 (@crftwrk)
 
 = 5.4.0 - September 19 2023 =
 

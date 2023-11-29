@@ -1,8 +1,0 @@
- {
- 	"name" : "bS Grid",
- 	"version" : "5.4.0",
- 	"download_url" : "https://github.com/bootscore/bs-grid/releases/download/v5.4.0/bs-grid-main.zip",
- 	"sections" : {
- 		"description" : "Ability to disable certain information and switch to Vanilla JS"
- 	}
- }

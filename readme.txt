@@ -111,68 +111,68 @@ Post/Page/CPT Grid/List Shortcodes
 
 == Changelog ==
 
-    = 5.4.0 - September 19 2023 =
+= 5.4.0 - September 19 2023 =
 
-        * [FEATURE] Ability to disable certain information #24
-        * [IMPROVEMENT] Delete enqueued CSS file and add tags-heading-none class to hero 20cb295
-        * [IMPROVEMENT] Switch to Vanilla JS #26
+* [FEATURE] Ability to disable certain information #24
+* [IMPROVEMENT] Delete enqueued CSS file and add tags-heading-none class to hero 20cb295
+* [IMPROVEMENT] Switch to Vanilla JS #26
 
-    = 5.3.4 - August 27 2023 =
-    
-        * [BUGFIX] Downgrade to plugin checker v4
+= 5.3.4 - August 27 2023 =
 
-    = 5.3.3 - August 26 2023 =
-    
-        * [BUGFIX] Hero tag badges #19
-        * [IMPROVEMENT] Deny direct access #20
-        * [UPDATE] Plugin update checker #21
+* [BUGFIX] Downgrade to plugin checker v4
 
-    = 5.3.2 - June 08 2023 =
+= 5.3.3 - August 26 2023 =
 
-        * [FEATURE] Add composer.json
+* [BUGFIX] Hero tag badges #19
+* [IMPROVEMENT] Deny direct access #20
+* [UPDATE] Plugin update checker #21
 
-    = 5.3.1 - April 26 2023 =
+= 5.3.2 - June 08 2023 =
 
-        * [IMPROVEMENT] Replace PHP echo's with shorthand
+* [FEATURE] Add composer.json
 
-    = 5.3.0 - March 31 2023 =
+= 5.3.1 - April 26 2023 =
 
-        * [IMPROVEMENT] Loop cards
+* [IMPROVEMENT] Replace PHP echo's with shorthand
 
-    = 5.2.3.0 - December 06 2022 =
+= 5.3.0 - March 31 2023 =
 
-        * [IMPROVEMENT] Removed data-bs-parent from Accordion
-        * [NEW] Tabs template
+* [IMPROVEMENT] Loop cards
 
-    = 5.2.2.0 - July 04 2022 =
-    
-        * Added new accordion template
+= 5.2.3.0 - December 06 2022 =
 
-    = 5.2.1.0 - June 29 2022 =
-    
-        * Added new hero template
-        * Reformatted all files
+* [IMPROVEMENT] Removed data-bs-parent from Accordion
+* [NEW] Tabs template
 
-    = 5.2.0.0 - January 10 2022 =
-    
-        * [NEW] Added shortcode to show single items by id
-        * [NEW] Added shortcode for custom post types by terms-slug
-        * [REMOVED] Shortcode for CPT by parent terms id
-        * [CHANGED] Template sc-grid.php
-        * [CHANGED] Template sc-list.php
+= 5.2.2.0 - July 04 2022 =
 
-    = 5.1.0.0 - September 13 2021 =
-    
-        * [NEW] Update checker
-        * [NEW] Shows Custom Post Types
-        * [CHANGED] MIT License
-        * [CHANGED] Repository name
-        * [CHANGED] Shortcodes
+* Added new accordion template
 
-    = 5.0.0.1 - February 16 2021 =
-    
-        * [NEW] Override templates in child-theme 
+= 5.2.1.0 - June 29 2022 =
 
-    = 5.0.0.0 - February 02 2021 =
-    
-        * Initial release
+* Added new hero template
+* Reformatted all files
+
+= 5.2.0.0 - January 10 2022 =
+
+* [NEW] Added shortcode to show single items by id
+* [NEW] Added shortcode for custom post types by terms-slug
+* [REMOVED] Shortcode for CPT by parent terms id
+* [CHANGED] Template sc-grid.php
+* [CHANGED] Template sc-list.php
+
+= 5.1.0.0 - September 13 2021 =
+
+* [NEW] Update checker
+* [NEW] Shows Custom Post Types
+* [CHANGED] MIT License
+* [CHANGED] Repository name
+* [CHANGED] Shortcodes
+
+= 5.0.0.1 - February 16 2021 =
+
+* [NEW] Override templates in child-theme 
+
+= 5.0.0.0 - February 02 2021 =
+
+* Initial release

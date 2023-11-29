@@ -2,7 +2,7 @@
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-grid?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-grid)
 
-WordPress plugin to show posts, pages or custom-post-types in grid / list cards, heroes, accordion or tabs via shortcode in bootScore theme.
+WordPress plugin to show posts, pages or custom-post-types in grid / list cards, heroes, accordion or tabs via shortcode in Bootscore theme.
 
 - Demo and documentation: https://bootscore.me/documentation/bs-grid/
 

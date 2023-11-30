@@ -2,20 +2,20 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.4.0
-Tested up to: 6.3.1
+Stable tag: 5.5.0
+Tested up to: 6.4.1
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
-Post / Page / Custom Post Type Grid, List or Hero for bootScore WordPress Theme, Copyright 2020 - 2022 The bootScore Contributors.
+Post / Page / Custom Post Type Grid, List or Hero for Bootscore WordPress Theme, Copyright 2020 - 2022 The Bootscore Contributors.
 
-License URI: https://github.com/bootscore/bs-swiper/blob/main/LICENSE
+License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
 == Credits ==
 
-    - Plugin Update Checker, YahnisElsts, MIT License https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
+- Plugin Update Checker, YahnisElsts, MIT License https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt
 
 
 == Installation ==
@@ -30,86 +30,92 @@ License URI: https://github.com/bootscore/bs-swiper/blob/main/LICENSE
 Post/Page/CPT Grid/List Shortcodes
 
 
-  = Posts by category slug = 
+= Posts by category slug = 
 
-    [bs-grid type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-    [bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-    [bs-hero type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-    [bs-accordion type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-    [bs-tabs type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
-    
-    Options:
+[bs-grid type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+[bs-list type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+[bs-hero type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+[bs-accordion type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
+[bs-tabs type="post" category="cars, boats" order="ASC" orderby="date" posts="6"]
 
-    category: category-slug - multiple categories separated by comma
-    order: ASC or DESC
-    orderby: date or title
-    posts: number of posts to display  
-    
-    
-  = Child-pages by parent-page id = 
+Options:
 
-    [bs-grid type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
-    [bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
-    [bs-hero type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
-    [bs-accordion type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
-    [bs-tabs type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+category: category-slug - multiple categories separated by comma
+order: ASC or DESC
+orderby: date or title
+posts: number of posts to display  
 
-    Options:
 
-    post_parent: ID of your parent page      
-    order: ASC or DESC
-    orderby: date or title
-    posts: number of pages to display
-        
-      
-  = Custom post types by terms-slug =
+= Child-pages by parent-page id = 
 
-    [bs-grid type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
-    [bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
-    [bs-hero type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
-    [bs-accordion type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
-    [bs-tabs type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+[bs-grid type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+[bs-list type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+[bs-hero type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+[bs-accordion type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
+[bs-tabs type="page" post_parent="21" order="ASC" orderby="title" posts="6"]
 
-    type: type of custom post type
-    terms: terms-slug - multiple terms separated by comma
-    order: ASC or DESC
-    orderby: date or title
-    posts: number of posts to display 
+Options:
 
-  = Single items by id =
-  
-    Posts
-    
-    [bs-grid type="post" id="1, 15"]
-    [bs-list type="post" id="1, 15"]
-    [bs-hero type="post" id="1, 15"]
-    [bs-accordion type="post" id="1, 15"]
-    [bs-tabs type="post" id="1, 15"]
-    
-    Pages
-    
-    [bs-grid type="page" id="2, 25"]
-    [bs-list type="page" id="2, 25"]
-    [bs-hero type="page" id="2, 25"]
-    [bs-accordion type="page" id="2, 25"]
-    [bs-tabs type="page" id="2, 25"]
-    
-    Custom post types
-    
-    [bs-grid type="isotope" id="33, 31"]
-    [bs-list type="isotope" id="33, 31"]
-    [bs-hero type="isotope" id="33, 31"]
-    [bs-accordion type="isotope" id="33, 31"]
-    [bs-tabs type="isotope" id="33, 31"]
-    
-    Options for posts using [bs-grid] or [bs-template]
-    
-    categories="false" hide categories badges
-    excerpt="false" hide excerpt
-    tags="false" hide tags badges
+post_parent: ID of your parent page      
+order: ASC or DESC
+orderby: date or title
+posts: number of pages to display
+
+
+= Custom post types by terms-slug =
+
+[bs-grid type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+[bs-list type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+[bs-hero type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+[bs-accordion type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+[bs-tabs type="isotope" tax="isotope_category" terms="dogs, cats" order="DESC" orderby="date" posts="5"]
+
+type: type of custom post type
+terms: terms-slug - multiple terms separated by comma
+order: ASC or DESC
+orderby: date or title
+posts: number of posts to display 
+
+= Single items by id =
+
+Posts
+
+[bs-grid type="post" id="1, 15"]
+[bs-list type="post" id="1, 15"]
+[bs-hero type="post" id="1, 15"]
+[bs-accordion type="post" id="1, 15"]
+[bs-tabs type="post" id="1, 15"]
+
+Pages
+
+[bs-grid type="page" id="2, 25"]
+[bs-list type="page" id="2, 25"]
+[bs-hero type="page" id="2, 25"]
+[bs-accordion type="page" id="2, 25"]
+[bs-tabs type="page" id="2, 25"]
+
+Custom post types
+
+[bs-grid type="isotope" id="33, 31"]
+[bs-list type="isotope" id="33, 31"]
+[bs-hero type="isotope" id="33, 31"]
+[bs-accordion type="isotope" id="33, 31"]
+[bs-tabs type="isotope" id="33, 31"]
+
+Options for posts using [bs-grid] or [bs-template]
+
+categories="false" hide categories badges
+excerpt="false" hide excerpt
+tags="false" hide tags badges
 
 
 == Changelog ==
+
+= 5.5.0 - November 30 2023 =
+
+* [IMPROVEMENT] Removed extract function and increase security #28 (@DogByteMarketing)
+* [BUGFIX]Possibility to get non published posts #29 (@DogByteMarketing)
+* [UPDATE] Update checker #30 (@crftwrk)
 
 = 5.4.0 - September 19 2023 =
 

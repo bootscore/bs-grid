@@ -48,11 +48,12 @@ add_action('wp_enqueue_scripts', 'bs_grid_scripts');
  *
  * Locate the called template.
  * Search Order:
- * 1. /themes/theme/bs-grid-main/$template_name
- * 2. /themes/theme/$template_name
- * 3. /plugins/bs-grid-main/templates/$template_name.
+ * 1. /themes/theme/bs-grid/$template_name
+ * 2. /themes/theme/bs-grid-main/$template_name
+ * 3. /themes/theme/$template_name
+ * 4. /plugins/bs-grid-main/templates/$template_name.
  *
- * @since 1.0.0
+ * @since 5.6.0
  *
  * @param 	string 	$template_name			Template to load.
  * @param 	string 	$string $template_path	Path to templates.
@@ -61,28 +62,26 @@ add_action('wp_enqueue_scripts', 'bs_grid_scripts');
  */
 function bs_grid_locate_template($template_name, $template_path = '', $default_path = '') {
 
-  // Set variable to search in bs-grid folder of theme.
-  if (!$template_path) :
-    $template_path = 'bs-grid-main/';
-  endif;
-
   // Set default plugin templates path.
   if (!$default_path) :
     $default_path = plugin_dir_path(__FILE__) . 'templates/'; // Path to the template folder
   endif;
 
-  // Search template file in theme folder.
-  $template = locate_template(array(
-    $template_path . $template_name,
-    $template_name
-  ));
+  // Check if 'bs-grid/' exists in the theme.
+  $bs_grid_path = get_theme_file_path('bs-grid/' . $template_name);
+  if (file_exists($bs_grid_path)) {
+    return $bs_grid_path;
+  }
 
-  // Get plugins template file.
-  if (!$template) :
-    $template = $default_path . $template_name;
-  endif;
+  // Check if 'bs-grid-main/' exists in the theme.
+  // Fallback for existing 'bs-grid-main/' folders in child theme
+  $bs_grid_main_path = get_theme_file_path('bs-grid-main/' . $template_name);
+  if (file_exists($bs_grid_main_path)) {
+    return $bs_grid_main_path;
+  }
 
-  return apply_filters('bs_grid_locate_template', $template, $template_name, $template_path, $default_path);
+  // If neither 'bs-grid/' nor 'bs-grid-main/' exists, return the default path.
+  return $default_path . $template_name;
 }
 
 

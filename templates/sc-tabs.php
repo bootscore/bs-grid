@@ -5,9 +5,9 @@
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-tabs.php
  *
- * @author   bootScore
- * @package  bS Grid
- * @version  5.3.3
+ * @author   Bootscore
+ * @package  bs Grid
+ * @version  5.6.0
  *
  * Post/Page/CPT Tabs Shortcodes
  *
@@ -88,12 +88,14 @@ function bootscore_tabs($atts) {
 <div class="bs-tabs mb-4">
 
   <!-- tab-nav -->
-  <nav class="nav nav-tabs mb-3">
-    <?php while ($query->have_posts()) : $query->the_post(); ?>
-    <button class="nav-link" data-bs-toggle="tab"><?php the_title(); ?></button>
-    <?php endwhile;
-      wp_reset_postdata(); ?>
-  </nav>
+  <div class="text-nowrap overflow-x-scroll">
+    <nav class="nav nav-tabs flex-nowrap mb-3">
+      <?php while ($query->have_posts()) : $query->the_post(); ?>
+      <button class="nav-link" data-bs-toggle="tab"><?php the_title(); ?></button>
+      <?php endwhile;
+        wp_reset_postdata(); ?>
+    </nav>
+  </div>
 
   <!-- tab-content -->
   <div class="tab-content">

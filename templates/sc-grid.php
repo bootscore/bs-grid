@@ -5,8 +5,8 @@
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-grid.php
  *
- * @author   bootScore
- * @package  bS Grid
+ * @author   Bootscore
+ * @package  bs Grid
  * @version  5.6.0
  *
  * Post/Page/CPT Grid Shortcodes

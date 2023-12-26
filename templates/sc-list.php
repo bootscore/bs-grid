@@ -5,8 +5,8 @@
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-list.php
  *
- * @author   bootScore
- * @package  bS Grid
+ * @author   Bootscore
+ * @package  bs Grid
  * @version  5.6.0
  *
  * Post/Page/CPT List Shortcodes
@@ -128,18 +128,14 @@ function bootscore_list($atts) {
                   ?>
                 </p>
               <?php endif; ?>
-
-              <p class="card-text">
-                <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                  <?php if ($atts['excerpt'] == 'true') : ?>
-                    <p class="card-text">
-                      <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                        <?= strip_tags(get_the_excerpt()); ?>
-                      </a>
-                    </p>
-                  <?php endif; ?>
-                </a>
-              </p>
+              
+              <?php if ($atts['excerpt'] == 'true') : ?>
+                <p class="card-text">
+                  <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                    <?= strip_tags(get_the_excerpt()); ?>
+                  </a>
+                </p>
+              <?php endif; ?>
 
               <p class="card-text">
                 <a class="read-more" href="<?php the_permalink(); ?>">

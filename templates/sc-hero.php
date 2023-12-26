@@ -5,9 +5,9 @@
  *
  * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-hero.php
  *
- * @author   bootScore
- * @package  bS Grid
- * @version  5.4.0
+ * @author   Bootscore
+ * @package  bs Grid
+ * @version  5.6.0
  *
  * Post/Page/CPT Hero Shortcodes
  *
@@ -95,19 +95,19 @@ function bootscore_hero($atts) {
   if ($query->have_posts()) { ?>
 
     <?php while ($query->have_posts()) : $query->the_post(); ?>
-      <div class="bs-grid-hero position-relative bg-dark mb-4 rounded tags-heading-none">
+      <div class="bs-grid-hero position-relative bg-dark mb-4 rounded">
         <!-- Featured Image-->
         <?php the_post_thumbnail('full', array('class' => 'grid-hero-img rounded')); ?>
         <div class="position-absolute top-0 end-0 bottom-0 start-0">
-          <div class="container h-100 d-flex flex-column">
-            <div class="mt-auto text-white mb-5 text-center">
+          <div class="container h-100 d-flex align-items-end">
+            <div class="text-white text-center mb-3">
               <!-- Category badge -->
               <?php if ($atts['categories'] == 'true') : ?>
                 <?php bootscore_category_badge(); ?>
               <?php endif; ?>
               <!-- Title -->
-              <h2 class="blog-post-title">
-                <a class="text-white" href="<?php the_permalink(); ?>">
+              <h2 class="blog-post-title h5">
+                <a class="text-white text-decoration-none" href="<?php the_permalink(); ?>">
                   <?php the_title(); ?>
                 </a>
               </h2>
@@ -120,7 +120,7 @@ function bootscore_hero($atts) {
                 </p>
               <?php endif; ?>
               <p class="card-text">
-                <a class="read-more btn btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+                <a class="read-more btn btn-sm btn-light" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
               </p>
                 <!-- Tags -->
               <?php if ($atts['tags'] == 'true') : ?>

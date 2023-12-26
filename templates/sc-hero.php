@@ -99,7 +99,7 @@ function bootscore_hero($atts) {
         <!-- Featured Image-->
         <?php the_post_thumbnail('full', array('class' => 'grid-hero-img rounded')); ?>
         <div class="position-absolute top-0 end-0 bottom-0 start-0">
-          <div class="container h-100 d-flex align-items-end">
+          <div class="container h-100 d-flex justify-content-center align-items-end">
             <div class="text-white text-center mb-3">
               <!-- Category badge -->
               <?php if ($atts['categories'] == 'true') : ?>

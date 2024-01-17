@@ -3,7 +3,7 @@
 /*
  * Hero template.
  *
- * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-hero.php
+ * This template can be overriden by copying this file to your-theme/bs-grid/sc-hero.php
  *
  * @author   Bootscore
  * @package  bs Grid

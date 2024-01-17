@@ -1,6 +1,7 @@
-# bS Grid
+# bs Grid
 
 [![Packagist Prerelease](https://img.shields.io/packagist/vpre/bootscore/bs-grid?logo=packagist&logoColor=fff)](https://packagist.org/packages/bootscore/bs-grid)
+[![Github All Releases](https://img.shields.io/github/downloads/bootscore/bs-grid/total.svg)](https://github.com/bootscore/bs-grid/releases)
 
 WordPress plugin to show posts, pages or custom-post-types in grid / list cards, heroes, accordion or tabs via shortcode in Bootscore theme.
 
@@ -9,7 +10,7 @@ WordPress plugin to show posts, pages or custom-post-types in grid / list cards,
 <img src="https://lh3.googleusercontent.com/pw/AM-JKLUxNADNzUEZvT53A8bP1QXSGubd4GEHdhPZw4wx3IsCu0A4XT7uM0SNBfrTzplvmE9jFBXr_Twytum2cWrDg0Scgroha0IRcp_73Y6NL3GZUrOlVbeL4-WeQS-UbXL2JVmLxjqq7JFdDTbPXivTtJsjRg=w1904-h1530-no" alt="bs-grid">
 
 ## Installation
-1. Download latest release [bs-grid-main.zip](https://github.com/bootscore/bs-grid/releases). 
+1. Download latest release [bs-grid.zip](https://github.com/bootscore/bs-grid/releases/latest/download/bs-grid.zip). 
 2. In your admin panel, go to Plugins > and click the Add New button.
 3. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
 4. Click Activate to use your new Plugin right away.
@@ -143,9 +144,9 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 ## Overriding templates via theme
 Template files can be found within the **/bs-grid-main/templates/** plugin directory.
 
-Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named **/bs-grid-main/** keeping the same file structure but removing the **/templates/** subdirectory. Path must be **/your-theme/bs-grid-main/[file].php**.
+Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named `/bs-grid/` keeping the same file structure but removing the `/templates/` subdirectory. Path must be `/your-theme/bs-grid/[file].php`.
 
-The copied file will now override the bS Grid template file. Change cards, classes or HTML as you want.
+The copied file will now override the bs Grid template file. Change cards, classes or HTML as you want.
 
 ### Templates that can be overridden
 - `sc-grid.php`
@@ -155,5 +156,5 @@ The copied file will now override the bS Grid template file. Change cards, class
 - `sc-tabs.php`
 
 ## License & Credits
-- bS Grid, MIT License https://github.com/bootscore/bs-grid/blob/main/LICENSE
+- bs Grid, MIT License https://github.com/bootscore/bs-grid/blob/main/LICENSE
 - Plugin Update Checker, YahnisElsts, MIT License https://github.com/YahnisElsts/plugin-update-checker/blob/master/license.txt

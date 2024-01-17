@@ -3,11 +3,11 @@
 /*
  * Accordion template.
  *
- * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-accordion.php
+ * This template can be overriden by copying this file to your-theme/bs-grid/sc-accordion.php
  *
- * @author   bootScore
- * @package  bS Grid
- * @version  5.3.3
+ * @author   Bootscore
+ * @package  bs Grid
+ * @version  5.6.0
  * 
  * Post/Page/CPT Accordion Shortcodes
  *

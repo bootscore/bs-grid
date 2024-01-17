@@ -3,7 +3,7 @@
 /*
  * List template.
  *
- * This template can be overriden by copying this file to your-theme/bs-grid-main/sc-list.php
+ * This template can be overriden by copying this file to your-theme/bs-grid/sc-list.php
  *
  * @author   Bootscore
  * @package  bs Grid

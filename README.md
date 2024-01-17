@@ -10,7 +10,7 @@ WordPress plugin to show posts, pages or custom-post-types in grid / list cards,
 <img src="https://lh3.googleusercontent.com/pw/AM-JKLUxNADNzUEZvT53A8bP1QXSGubd4GEHdhPZw4wx3IsCu0A4XT7uM0SNBfrTzplvmE9jFBXr_Twytum2cWrDg0Scgroha0IRcp_73Y6NL3GZUrOlVbeL4-WeQS-UbXL2JVmLxjqq7JFdDTbPXivTtJsjRg=w1904-h1530-no" alt="bs-grid">
 
 ## Installation
-1. Download latest release [bs-grid-main.zip](https://github.com/bootscore/bs-grid/releases). 
+1. Download latest release [bs-grid.zip](https://github.com/bootscore/bs-grid/releases). 
 2. In your admin panel, go to Plugins > and click the Add New button.
 3. Click Upload Plugin and Choose File, then select the Plugin's .zip file. Click Install Now.
 4. Click Activate to use your new Plugin right away.

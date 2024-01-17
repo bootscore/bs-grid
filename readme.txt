@@ -111,6 +111,16 @@ tags="false" hide tags badges
 
 == Changelog ==
 
+= 5.6.0 - January 17 2024 =
+
+* [FEATURE] Rewrite locate template script to skip -main suffix in child folder #32 (@crftwrk)
+* [IMPROVEMENT] Removed -main branch suffix from plugin's folder. This does not affect existing bs-grid-main installations.
+* [IMPROVEMENT] Change text-muted to text-body-secondary #33 (@crftwrk)
+* [IMPROVEMENT] Add nav-scroller to tabs #34 (@crftwrk)
+* [IMPROVEMENT] Classes in hero templates 4540534 d600b13 (@crftwrk)
+* [BUGFIX] Remove duplicate <p> in sc-list.php 47f8493 (@crftwrk)
+* [UPDATE] Update checker 5.3 ef7d0ae (@crftwrk)
+
 = 5.5.0 - November 30 2023 =
 
 * [IMPROVEMENT] Removed extract function and increase security #28 (@DogByteMarketing)

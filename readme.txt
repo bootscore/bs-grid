@@ -1,9 +1,9 @@
-=== bS Grid ===
+=== bs Grid ===
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.5.0
-Tested up to: 6.4.1
+Stable tag: 5.6.0
+Tested up to: 6.4.2
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License

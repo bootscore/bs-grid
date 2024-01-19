@@ -118,7 +118,7 @@ tags="false" hide tags badges
 * [IMPROVEMENT] Change text-muted to text-body-secondary #33 (@crftwrk)
 * [IMPROVEMENT] Add nav-scroller to tabs #34 (@crftwrk)
 * [IMPROVEMENT] Classes in hero templates 4540534 d600b13 (@crftwrk)
-* [BUGFIX] Remove duplicate p in sc-list.php 47f8493 (@crftwrk)
+* [BUGFIX] Remove duplicate `<p>` in sc-list.php 47f8493 (@crftwrk)
 * [UPDATE] Update checker 5.3 ef7d0ae (@crftwrk)
 
 = 5.5.0 - November 30 2023 =

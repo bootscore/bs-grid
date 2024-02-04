@@ -1,5 +1,5 @@
 /*!
- * bS Grid
+ * bs Grid
  * 
  * @version 5.4.0
  */

@@ -142,7 +142,7 @@ Showing child-pages in parent-page is very useful to avoid empty parent-pages.
 - `excerpt="false"` hide excerpt
 
 ## Overriding templates via theme
-Template files can be found within the **/bs-grid-main/templates/** plugin directory.
+Template files can be found within the `/bs-grid-main/templates/` plugin directory.
 
 Edit files in an upgrade-safe way using overrides. Copy the template into a directory within your theme named `/bs-grid/` keeping the same file structure but removing the `/templates/` subdirectory. Path must be `/your-theme/bs-grid/[file].php`.
 

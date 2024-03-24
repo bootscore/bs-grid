@@ -89,7 +89,7 @@ function bootscore_tabs($atts) {
 
   <!-- tab-nav -->
   <div class="d-flex text-nowrap overflow-x-auto">
-    <nav class="nav nav-tabs flex-nowrap mb-3">
+    <nav class="nav nav-tabs flex-nowrap flex-grow-1 mb-3">
       <?php while ($query->have_posts()) : $query->the_post(); ?>
       <button class="nav-link" data-bs-toggle="tab"><?php the_title(); ?></button>
       <?php endwhile;

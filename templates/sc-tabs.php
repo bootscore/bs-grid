@@ -7,7 +7,7 @@
  *
  * @author   Bootscore
  * @package  bs Grid
- * @version  5.6.0
+ * @version  5.6.1
  *
  * Post/Page/CPT Tabs Shortcodes
  *
@@ -88,7 +88,7 @@ function bootscore_tabs($atts) {
 <div class="bs-tabs mb-4">
 
   <!-- tab-nav -->
-  <div class="text-nowrap overflow-x-scroll">
+  <div class="d-flex text-nowrap overflow-x-auto">
     <nav class="nav nav-tabs flex-nowrap mb-3">
       <?php while ($query->have_posts()) : $query->the_post(); ?>
       <button class="nav-link" data-bs-toggle="tab"><?php the_title(); ?></button>

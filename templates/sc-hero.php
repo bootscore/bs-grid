@@ -7,7 +7,7 @@
  *
  * @author   Bootscore
  * @package  bs Grid
- * @version  5.6.0
+ * @version  5.6.1
  *
  * Post/Page/CPT Hero Shortcodes
  *
@@ -78,7 +78,7 @@ function bootscore_hero($atts) {
     unset($options['category_name']);
     $options['tax_query'] = array(array(
       'taxonomy' => $tax,
-      'field'    => 'name',
+      'field'    => 'slug',
       'terms'    => $terms,
     ));
   }

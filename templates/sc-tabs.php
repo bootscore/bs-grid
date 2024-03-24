@@ -69,7 +69,7 @@ function bootscore_tabs($atts) {
     unset($options['category_name']);
     $options['tax_query'] = array(array(
       'taxonomy' => $tax,
-      'field'    => 'name',
+      'field'    => 'slug',
       'terms'    => $terms,
     ));
   }

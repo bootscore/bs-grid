@@ -2,14 +2,14 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.6.0
-Tested up to: 6.4.2
+Stable tag: 5.6.1
+Tested up to: 6.4.3
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
-Post / Page / Custom Post Type Grid, List or Hero for Bootscore WordPress Theme, Copyright 2020 - 2022 The Bootscore Contributors.
+Post / Page / Custom Post Type Grid, List or Hero for Bootscore WordPress Theme, Copyright 2020 - 2024 The Bootscore Contributors.
 
 License URI: https://github.com/bootscore/bs-grid/blob/main/LICENSE
 
@@ -111,83 +111,166 @@ tags="false" hide tags badges
 
 == Changelog ==
 
+= 5.6.1 - March 28 2024 =
+
+#### Improvement
+
+* Moved js and src into assets folder
+
+#### Bugfix
+
+* Tab-scroller
+* Term field name to slug
+
+#### Update
+
+* Update checker 5.4
+
 = 5.6.0 - January 17 2024 =
 
-* [FEATURE] Rewrite locate template script to skip -main suffix in child folder #32 (@crftwrk)
-* [IMPROVEMENT] Removed -main branch suffix from plugin's folder. This does not affect existing bs-grid-main installations.
-* [IMPROVEMENT] Change text-muted to text-body-secondary #33 (@crftwrk)
-* [IMPROVEMENT] Add nav-scroller to tabs #34 (@crftwrk)
-* [IMPROVEMENT] Classes in hero templates 4540534 d600b13 (@crftwrk)
-* [BUGFIX] Remove duplicate `<p>` in sc-list.php 47f8493 (@crftwrk)
-* [UPDATE] Update checker 5.3 ef7d0ae (@crftwrk)
+#### Feature
+
+* Rewrite locate template script to skip -main suffix in child folder
+
+#### Improvement
+
+* Removed -main branch suffix from plugin's folder. This does not affect existing bs-grid-main installations.
+* Change text-muted to text-body-secondary
+* Add nav-scroller to tabs
+* Classes in hero templates
+
+#### Bugfix
+
+* Remove duplicate `<p>` in sc-list.php
+
+#### Update
+
+* Update checker 5.3
 
 = 5.5.0 - November 30 2023 =
 
-* [IMPROVEMENT] Removed extract function and increase security #28 (@DogByteMarketing)
-* [BUGFIX]Possibility to get non published posts #29 (@DogByteMarketing)
-* [UPDATE] Update checker #30 (@crftwrk)
+#### Improvement
+
+* Removed extract function and increase security
+
+#### Bugfix
+
+* Possibility to get non published posts
+
+#### Update
+
+* Update checker 5
 
 = 5.4.0 - September 19 2023 =
 
-* [FEATURE] Ability to disable certain information #24
-* [IMPROVEMENT] Delete enqueued CSS file and add tags-heading-none class to hero 20cb295
-* [IMPROVEMENT] Switch to Vanilla JS #26
+#### Feature
+
+* Ability to disable certain information
+
+#### Improvement
+
+* Delete enqueued CSS file and add tags-heading-none class to hero
+* Switch to Vanilla JS
 
 = 5.3.4 - August 27 2023 =
 
-* [BUGFIX] Downgrade to plugin checker v4
+#### Bugfix
+
+* Downgrade to plugin checker v4
 
 = 5.3.3 - August 26 2023 =
 
-* [BUGFIX] Hero tag badges #19
-* [IMPROVEMENT] Deny direct access #20
-* [UPDATE] Plugin update checker #21
+#### Improvement
+
+* Deny direct access
+
+#### Bugfix
+
+* Hero tag badges
+
+#### Update
+
+* Plugin update checker
 
 = 5.3.2 - June 08 2023 =
 
-* [FEATURE] Add composer.json
+#### Feature
+
+* Add composer.json
 
 = 5.3.1 - April 26 2023 =
 
-* [IMPROVEMENT] Replace PHP echo's with shorthand
+#### Improvement
+
+* Replace PHP echo's with shorthand
 
 = 5.3.0 - March 31 2023 =
 
-* [IMPROVEMENT] Loop cards
+#### Improvement
+
+* Loop cards
 
 = 5.2.3.0 - December 06 2022 =
 
-* [IMPROVEMENT] Removed data-bs-parent from Accordion
-* [NEW] Tabs template
+#### Feature
+
+* Tabs template
+
+#### Improvement
+
+* Removed data-bs-parent from Accordion
+
 
 = 5.2.2.0 - July 04 2022 =
+
+#### Feature
 
 * Added new accordion template
 
 = 5.2.1.0 - June 29 2022 =
 
+#### Feature
+
 * Added new hero template
+
+#### Improvement
+
 * Reformatted all files
 
 = 5.2.0.0 - January 10 2022 =
 
-* [NEW] Added shortcode to show single items by id
-* [NEW] Added shortcode for custom post types by terms-slug
-* [REMOVED] Shortcode for CPT by parent terms id
-* [CHANGED] Template sc-grid.php
-* [CHANGED] Template sc-list.php
+#### Feature
+
+* Added shortcode to show single items by id
+* Added shortcode for custom post types by terms-slug
+
+#### Removed
+
+* Shortcode for CPT by parent terms id
+
+#### Update
+
+* Template sc-grid.php
+* Template sc-list.php
 
 = 5.1.0.0 - September 13 2021 =
 
-* [NEW] Update checker
-* [NEW] Shows Custom Post Types
-* [CHANGED] MIT License
-* [CHANGED] Repository name
-* [CHANGED] Shortcodes
+#### Feature
+
+* Update checker
+* Shows Custom Post Types
+
+#### Update
+
+* MIT License
+* Repository name
+* Shortcodes
 
 = 5.0.0.1 - February 16 2021 =
 
-* [NEW] Override templates in child-theme 
+#### Feature
+
+* Override templates in child-theme 
 
 = 5.0.0.0 - February 02 2021 =
 

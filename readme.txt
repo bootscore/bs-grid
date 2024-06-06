@@ -2,8 +2,8 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.6.1
-Tested up to: 6.4.3
+Stable tag: 5.7.0
+Tested up to: 6.5.4
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
@@ -110,6 +110,16 @@ tags="false" hide tags badges
 
 
 == Changelog ==
+
+= 5.7.0 - June 06 2024 =
+
+#### Feature
+
+* Added a filter to grid template columns
+
+#### Templates changed
+
+* `sc-grid.php`
 
 = 5.6.1 - March 28 2024 =
 

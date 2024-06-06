@@ -97,7 +97,7 @@ function bootscore_grid($atts) {
     <div class="row">
       <?php while ($query->have_posts()) : $query->the_post(); ?>
         
-      <div class="<?= apply_filters('bootscore/class/grid/col', 'col-md-6 col-lg-4 col-xxl-3'); ?> mb-4">
+      <div class="<?= apply_filters('bootscore/bs-grid/class/grid/col', 'col-md-6 col-lg-4 col-xxl-3'); ?> mb-4">
           
         <div class="card h-100">
 

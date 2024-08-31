@@ -2,8 +2,8 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.7.0
-Tested up to: 6.5.4
+Stable tag: 5.7.1
+Tested up to: 6.6
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
@@ -110,6 +110,14 @@ tags="false" hide tags badges
 
 
 == Changelog ==
+
+= 5.7.1 - August 31 2024 =
+
+#### Improvements
+
+* Added icon.svg
+* Updated meta
+* Tested up to WP 6.6
 
 = 5.7.0 - June 06 2024 =
 

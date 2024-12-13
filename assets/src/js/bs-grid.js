@@ -1,7 +1,7 @@
 /*!
  * bs Grid
  * 
- * @version 5.4.0
+ * @version 5.7.2
  */
 
 
@@ -44,8 +44,8 @@ bsAccordionItems.forEach(function (item, i) {
 
 
 // Tabs  
-document.querySelectorAll('.bs-tabs .nav.nav-tabs .nav-link').forEach(function (link, i) {
-  // Add dynamic data-bs-target and aria-controls to nav-tabs
+document.querySelectorAll('.bs-tabs .nav .nav-link').forEach(function (link, i) {
+  // Add dynamic data-bs-target and aria-controls to nav
   link.setAttribute("data-bs-target", "#tab_content_" + i);
   link.setAttribute("aria-controls", "tab_content_" + i);
 });

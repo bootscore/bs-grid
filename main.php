@@ -35,11 +35,13 @@ $myUpdateChecker->setBranch('main');
 /**
  * Register Scripts
  */
-function bs_grid_scripts(){
+function bs_grid_scripts() {
+  $script_file = plugin_dir_path(__FILE__) . 'assets/js/bs-grid.min.js';
+  $script_ver  = file_exists($script_file) ? date('YmdHi', filemtime($script_file)) : false;
 
-  wp_enqueue_script('bs-grid-js', plugins_url('/assets/js/bs-grid.min.js', __FILE__), array(), false, true);
-  
+  wp_enqueue_script('bs-grid-js', plugins_url('/assets/js/bs-grid.min.js', __FILE__), [], $script_ver, true);
 }
+
 add_action('wp_enqueue_scripts', 'bs_grid_scripts');
 
 

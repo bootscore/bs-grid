@@ -2,8 +2,8 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.7.1
-Tested up to: 6.6
+Stable tag: 5.7.2
+Tested up to: 6.8
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
@@ -110,6 +110,19 @@ tags="false" hide tags badges
 
 
 == Changelog ==
+
+= 5.7.2 - April 16 2025 =
+
+#### Improvements
+
+* Removed `.nav-tabs` class in JS to allow tabs work with other `.nav` components
+* Added `icon.png`
+* Added a timestamp to prevent caching if JS file has been changed
+
+#### Updates
+
+* Plugin Update Checker v5.5 33f1c0f (@crftwrk)
+* Tested up tp WP 6.8
 
 = 5.7.1 - August 31 2024 =
 

@@ -121,7 +121,7 @@ tags="false" hide tags badges
 
 #### Updates
 
-* Plugin Update Checker v5.5 33f1c0f (@crftwrk)
+* Plugin Update Checker v5.5
 * Tested up tp WP 6.8
 
 = 5.7.1 - August 31 2024 =

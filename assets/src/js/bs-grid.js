@@ -1,7 +1,7 @@
 /*!
  * bs Grid
  * 
- * @version 5.7.2
+ * @version 5.8.0
  */
 
 
@@ -43,30 +43,59 @@ bsAccordionItems.forEach(function (item, i) {
 });
 
 
-// Tabs  
-document.querySelectorAll('.bs-tabs .nav .nav-link').forEach(function (link, i) {
-  // Add dynamic data-bs-target and aria-controls to nav
-  link.setAttribute("data-bs-target", "#tab_content_" + i);
-  link.setAttribute("aria-controls", "tab_content_" + i);
-});
-
-document.querySelectorAll('.bs-tabs .tab-content .tab-pane').forEach(function (pane, i) {
-  // Add dynamic id and aria-labelledby to tab-content
-  pane.id = "tab_content_" + i;
-  pane.setAttribute("aria-labelledby", "tab_content_" + i);
-});
-
-// First item active if it exists
-// Handle each instance of tabs separately
-document.querySelectorAll('.bs-tabs').forEach(function (tabs) {
-  const firstNavLink = tabs.querySelector('.nav-link:first-child');
-  const firstTabPane = tabs.querySelector('.tab-content .tab-pane:first-child');
-
-  if (firstNavLink) {
-    firstNavLink.classList.add('active');
+// Tabs with nested support
+function initializeTabs(container) {
+  // Handle both tab structures:
+  // 1. Standard: .d-flex > nav > .nav-link
+  // 2. Cards/List: .container-scroll > ul > li > .nav-link OR .d-flex > ul > li > .nav-link
+  let navLinks = container.querySelectorAll(':scope > .d-flex > nav > .nav-link');
+  
+  // If no direct nav links found, try the ul > li structure
+  if (navLinks.length === 0) {
+    navLinks = container.querySelectorAll(':scope > .container-scroll > ul > li > .nav-link, :scope > .d-flex > ul > li > .nav-link');
   }
+  
+  const tabPanes = container.querySelectorAll(':scope > .tab-content > .tab-pane, :scope > .container > .tab-content > .tab-pane');
+  
+  // Generate a unique prefix for this tab instance
+  const uniqueId = 'tab_' + Math.random().toString(36).substr(2, 9);
+  
+  // Add dynamic data-bs-target and aria-controls to nav
+  navLinks.forEach(function (link, i) {
+    const targetId = uniqueId + '_content_' + i;
+    link.setAttribute("data-bs-target", "#" + targetId);
+    link.setAttribute("aria-controls", targetId);
+  });
+  
+  // Add dynamic id and aria-labelledby to tab-content
+  tabPanes.forEach(function (pane, i) {
+    const paneId = uniqueId + '_content_' + i;
+    pane.id = paneId;
+    pane.setAttribute("aria-labelledby", paneId);
+    
+    // FIXED: Look for nested tabs ANYWHERE inside this pane (not just direct children)
+    pane.querySelectorAll('.bs-tabs').forEach(function(nestedTab) {
+      // Make sure this nested tab hasn't already been initialized
+      const nestedNavLinks = nestedTab.querySelectorAll('.nav-link');
+      if (nestedNavLinks.length > 0 && !nestedNavLinks[0].hasAttribute('data-bs-target')) {
+        initializeTabs(nestedTab);
+      }
+    });
+  });
+  
+  // First item active
+  if (navLinks.length > 0) {
+    navLinks[0].classList.add('active');
+  }
+  if (tabPanes.length > 0) {
+    tabPanes[0].classList.add('show', 'active');
+  }
+}
 
-  if (firstTabPane) {
-    firstTabPane.classList.add('show', 'active');
+// Initialize only top-level tab instances
+document.querySelectorAll('.bs-tabs').forEach(function (tabs) {
+  // Only initialize if this tab is NOT nested inside another .bs-tabs
+  if (!tabs.parentElement.closest('.bs-tabs')) {
+    initializeTabs(tabs);
   }
 });

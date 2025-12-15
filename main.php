@@ -160,3 +160,92 @@ function bs_grid_tabs() {
   return bs_grid_get_template('sc-tabs.php');
 }
 add_action('wp_head', 'bs_grid_tabs');
+
+
+
+
+/**
+ * Register bs Grid patterns automatically from patterns folder
+ */
+add_action( 'init', function () {
+
+	if ( function_exists( 'register_block_pattern_category' ) ) {
+		register_block_pattern_category(
+			'bs-grid',
+			[
+				'label' => __( 'bs Grid', 'bs-grid' ),
+			]
+		);
+	}
+
+}, 5 ); // 👈 lower priority = earlier
+
+
+
+/**
+ * Register patterns after the category
+ */
+add_action( 'init', function () {
+
+	if ( ! function_exists( 'register_block_pattern' ) ) {
+		return;
+	}
+
+	$patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns/';
+
+	foreach ( glob( $patterns_dir . '*.php' ) as $pattern_file ) {
+
+		$pattern = require $pattern_file;
+
+		if ( ! is_array( $pattern ) || empty( $pattern['content'] ) ) {
+			continue;
+		}
+
+		$slug = basename( $pattern_file, '.php' );
+
+		register_block_pattern(
+			'bs-grid/' . $slug,
+			$pattern
+		);
+	}
+
+});
+
+
+
+/**
+ * Register editor styles
+ */
+/**
+ * Editor-only styles for bs-grid
+ */
+add_action( 'enqueue_block_editor_assets', function () {
+
+	wp_enqueue_style(
+		'bs-grid-editor',
+		plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
+		[],
+		filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
+	);
+
+} );
+
+/**
+ * Site Editor + Pattern iframe (still editor, not frontend)
+ */
+add_action( 'enqueue_block_assets', function () {
+
+	if ( ! is_admin() ) {
+		return;
+	}
+
+	wp_enqueue_style(
+		'bs-grid-editor',
+		plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
+		[],
+		filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
+	);
+
+} );
+
+

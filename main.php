@@ -164,88 +164,94 @@ add_action('wp_head', 'bs_grid_tabs');
 
 
 
+
+
+
+/**
+ * Register bs Grid pattern category
+ */
+function bs_grid_register_pattern_category() {
+
+  if ( ! function_exists( 'register_block_pattern_category' ) ) {
+    return;
+  }
+
+  register_block_pattern_category(
+    'bs-grid',
+    [
+      'label' => __( 'bs Grid', 'bs-grid' ),
+    ]
+  );
+}
+
+add_action( 'init', 'bs_grid_register_pattern_category', 5 ); // lower priority = earlier
+
+
 /**
  * Register bs Grid patterns automatically from patterns folder
  */
-add_action( 'init', function () {
+function bs_grid_register_patterns() {
 
-	if ( function_exists( 'register_block_pattern_category' ) ) {
-		register_block_pattern_category(
-			'bs-grid',
-			[
-				'label' => __( 'bs Grid', 'bs-grid' ),
-			]
-		);
-	}
+  if ( ! function_exists( 'register_block_pattern' ) ) {
+    return;
+  }
 
-}, 5 ); // 👈 lower priority = earlier
+  $patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns/';
 
+  foreach ( glob( $patterns_dir . '*.php' ) as $pattern_file ) {
 
+    $pattern = require $pattern_file;
 
-/**
- * Register patterns after the category
- */
-add_action( 'init', function () {
+    if ( ! is_array( $pattern ) || empty( $pattern['content'] ) ) {
+      continue;
+    }
 
-	if ( ! function_exists( 'register_block_pattern' ) ) {
-		return;
-	}
+    $slug = basename( $pattern_file, '.php' );
 
-	$patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns/';
+    register_block_pattern(
+      'bs-grid/' . $slug,
+      $pattern
+    );
+  }
+}
 
-	foreach ( glob( $patterns_dir . '*.php' ) as $pattern_file ) {
-
-		$pattern = require $pattern_file;
-
-		if ( ! is_array( $pattern ) || empty( $pattern['content'] ) ) {
-			continue;
-		}
-
-		$slug = basename( $pattern_file, '.php' );
-
-		register_block_pattern(
-			'bs-grid/' . $slug,
-			$pattern
-		);
-	}
-
-});
+add_action( 'init', 'bs_grid_register_patterns' );
 
 
-
-/**
- * Register editor styles
- */
 /**
  * Editor-only styles for bs-grid
  */
-add_action( 'enqueue_block_editor_assets', function () {
+function bs_grid_enqueue_editor_styles() {
 
-	wp_enqueue_style(
-		'bs-grid-editor',
-		plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
-		[],
-		filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
-	);
+  wp_enqueue_style(
+    'bs-grid-editor',
+    plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
+    [],
+    filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
+  );
+}
 
-} );
+add_action( 'enqueue_block_editor_assets', 'bs_grid_enqueue_editor_styles' );
+
 
 /**
  * Site Editor + Pattern iframe (still editor, not frontend)
  */
-add_action( 'enqueue_block_assets', function () {
+function bs_grid_enqueue_site_editor_styles() {
 
-	if ( ! is_admin() ) {
-		return;
-	}
+  if ( ! is_admin() ) {
+    return;
+  }
 
-	wp_enqueue_style(
-		'bs-grid-editor',
-		plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
-		[],
-		filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
-	);
+  wp_enqueue_style(
+    'bs-grid-editor',
+    plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
+    [],
+    filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
+  );
+}
 
-} );
+add_action( 'enqueue_block_assets', 'bs_grid_enqueue_site_editor_styles' );
+
 
 

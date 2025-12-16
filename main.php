@@ -32,17 +32,10 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 
 
-/**
- * Register Scripts
- */
-function bs_grid_scripts() {
-  $script_file = plugin_dir_path(__FILE__) . 'assets/js/bs-grid.min.js';
-  $script_ver  = file_exists($script_file) ? date('YmdHi', filemtime($script_file)) : false;
 
-  wp_enqueue_script('bs-grid-js', plugins_url('/assets/js/bs-grid.min.js', __FILE__), [], $script_ver, true);
-}
+require_once('inc/enqueue.php');          // Enqueue scripts and styles
 
-add_action('wp_enqueue_scripts', 'bs_grid_scripts');
+
 
 
 /**
@@ -216,42 +209,4 @@ function bs_grid_register_patterns() {
 }
 
 add_action( 'init', 'bs_grid_register_patterns' );
-
-
-/**
- * Editor-only styles for bs-grid
- */
-function bs_grid_enqueue_editor_styles() {
-
-  wp_enqueue_style(
-    'bs-grid-editor',
-    plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
-    [],
-    filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
-  );
-}
-
-add_action( 'enqueue_block_editor_assets', 'bs_grid_enqueue_editor_styles' );
-
-
-/**
- * Site Editor + Pattern iframe (still editor, not frontend)
- */
-function bs_grid_enqueue_site_editor_styles() {
-
-  if ( ! is_admin() ) {
-    return;
-  }
-
-  wp_enqueue_style(
-    'bs-grid-editor',
-    plugin_dir_url( __FILE__ ) . 'assets/css/block-editor.css',
-    [],
-    filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/block-editor.css' )
-  );
-}
-
-add_action( 'enqueue_block_assets', 'bs_grid_enqueue_site_editor_styles' );
-
-
 

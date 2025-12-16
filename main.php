@@ -34,6 +34,7 @@ $myUpdateChecker->setBranch('main');
 
 
 require_once('inc/enqueue.php');          // Enqueue scripts and styles
+require_once('inc/patterns.php');         // Register patterns
 
 
 
@@ -160,53 +161,4 @@ add_action('wp_head', 'bs_grid_tabs');
 
 
 
-/**
- * Register bs Grid pattern category
- */
-function bs_grid_register_pattern_category() {
-
-  if ( ! function_exists( 'register_block_pattern_category' ) ) {
-    return;
-  }
-
-  register_block_pattern_category(
-    'bs-grid',
-    [
-      'label' => __( 'bs Grid', 'bs-grid' ),
-    ]
-  );
-}
-
-add_action( 'init', 'bs_grid_register_pattern_category', 5 ); // lower priority = earlier
-
-
-/**
- * Register bs Grid patterns automatically from patterns folder
- */
-function bs_grid_register_patterns() {
-
-  if ( ! function_exists( 'register_block_pattern' ) ) {
-    return;
-  }
-
-  $patterns_dir = plugin_dir_path( __FILE__ ) . 'patterns/';
-
-  foreach ( glob( $patterns_dir . '*.php' ) as $pattern_file ) {
-
-    $pattern = require $pattern_file;
-
-    if ( ! is_array( $pattern ) || empty( $pattern['content'] ) ) {
-      continue;
-    }
-
-    $slug = basename( $pattern_file, '.php' );
-
-    register_block_pattern(
-      'bs-grid/' . $slug,
-      $pattern
-    );
-  }
-}
-
-add_action( 'init', 'bs_grid_register_patterns' );
 

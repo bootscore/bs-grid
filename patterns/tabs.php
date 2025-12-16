@@ -1,6 +1,6 @@
 <?php
 return [
-	'title'       => __( 'Tabs', 'bs-grid' ),
+	'title'       => __( 'c - Tabs', 'bs-grid' ),
 	'description' => __( 'Tabs pattern', 'bs-grid' ),
 	'categories'  => [ 'bs-grid' ],
 	'content'     => <<<'HTML'

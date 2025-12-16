@@ -1,6 +1,6 @@
 <?php
 return [
-	'title'       => __( 'Accordion flush', 'bs-grid' ),
+	'title'       => __( 'c - Accordion flush', 'bs-grid' ),
 	'description' => __( 'Accordion flush pattern', 'bs-grid' ),
 	'categories'  => [ 'bs-grid' ],
 	'content'     => <<<'HTML'

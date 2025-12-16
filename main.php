@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Update checker
  */
-require 'update/plugin-update-checker.php';
+require 'inc/update/plugin-update-checker.php';
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $myUpdateChecker = PucFactory::buildUpdateChecker(
@@ -38,14 +38,3 @@ $myUpdateChecker->setBranch('main');
 require_once('inc/locate-template.php');  // Allow template overrides in child-theme
 require_once('inc/enqueue.php');          // Enqueue scripts and styles
 require_once('inc/patterns.php');         // Register patterns
-
-
-
-
-
-
-
-
-
-
-

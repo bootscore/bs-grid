@@ -38,4 +38,3 @@ $myUpdateChecker->setBranch('main');
 require_once plugin_dir_path( __FILE__ ) . 'inc/locate-template.php'; // Template overrides
 require_once plugin_dir_path( __FILE__ ) . 'inc/enqueue.php';         // Scripts & styles
 require_once plugin_dir_path( __FILE__ ) . 'inc/patterns.php';        // Block patterns
-

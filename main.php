@@ -35,6 +35,7 @@ $myUpdateChecker->setBranch('main');
 /**
  * Load required files
  */
-require_once('inc/locate-template.php');  // Allow template overrides in child-theme
-require_once('inc/enqueue.php');          // Enqueue scripts and styles
-require_once('inc/patterns.php');         // Register patterns
+require_once plugin_dir_path( __FILE__ ) . 'inc/locate-template.php'; // Template overrides
+require_once plugin_dir_path( __FILE__ ) . 'inc/enqueue.php';         // Scripts & styles
+require_once plugin_dir_path( __FILE__ ) . 'inc/patterns.php';        // Block patterns
+

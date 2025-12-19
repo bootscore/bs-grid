@@ -22,15 +22,22 @@ function bs_grid_scripts() {
   $plugin_dir = plugin_dir_path(__DIR__);
   $plugin_url = plugin_dir_url(__DIR__);
 
-  // File paths
-  $bs_grid_js      = $plugin_dir . 'assets/js/bs-grid.min.js';
-  
-  // Versions based on file modification time
-  $bs_grid_js_ver      = file_exists($swiper_js) ? date('YmdHi', filemtime($swiper_js)) : false;
-  
-  // Enqueue scripts with versioning
-  wp_enqueue_script('bs-grid-js', $plugin_url . 'assets/js/bs-grid.min.js', [], $swiper_js_ver, true);
-  
+  // File path
+  $bs_grid_js = $plugin_dir . 'assets/js/bs-grid.min.js';
+
+  // Version based on file modification time
+  $bs_grid_js_ver = file_exists($bs_grid_js)
+    ? filemtime($bs_grid_js)
+    : false;
+
+  // Enqueue script
+  wp_enqueue_script(
+    'bs-grid-js',
+    $plugin_url . 'assets/js/bs-grid.min.js',
+    [],
+    $bs_grid_js_ver,
+    true
+  );
 }
 add_action('wp_enqueue_scripts', 'bs_grid_scripts');
 

@@ -1,0 +1,18 @@
+/* Styles apply only in the block editor */
+
+
+/* Make collapse visible in the editor (Accordion) */
+.block-editor-block-list__block .collapse:not(.show) {
+  display: block;
+}
+
+/* Tabs */
+.block-editor-block-list__block .tab-content > .tab-pane {
+  display: block;
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+  padding: 1rem;
+}
+
+.block-editor-block-list__block .fade:not(.show) {
+  opacity: 1;
+}

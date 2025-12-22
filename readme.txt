@@ -3,7 +3,7 @@
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
 Stable tag: 5.7.2
-Tested up to: 6.8
+Tested up to: 6.9
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License

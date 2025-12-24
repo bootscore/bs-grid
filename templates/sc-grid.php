@@ -7,7 +7,7 @@
  *
  * @author   Bootscore
  * @package  bs Grid
- * @version  5.7.0
+ * @version  5.8.0
  *
  * Post/Page/CPT Grid Shortcodes
  *
@@ -97,7 +97,7 @@ function bootscore_grid($atts) {
     <div class="row">
       <?php while ($query->have_posts()) : $query->the_post(); ?>
         
-      <div class="<?= apply_filters('bootscore/bs-grid/class/col', 'col-md-6 col-lg-4 col-xxl-3'); ?> mb-4">
+      <div class="<?= esc_attr(apply_filters('bootscore/bs-grid/class/col', 'col-md-6 col-lg-4 col-xxl-3')); ?> mb-4">
           
         <div class="card h-100">
 

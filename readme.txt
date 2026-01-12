@@ -2,7 +2,7 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.7.2
+Stable tag: 5.8.0
 Tested up to: 6.9
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -110,6 +110,21 @@ tags="false" hide tags badges
 
 
 == Changelog ==
+
+= 5.8.0 - January 12 2026 =
+
+#### Features
+
+* Added accordion and tabs patterns
+
+#### Improvements
+
+* Escape HTML in filters
+
+#### Updates
+
+* Plugin Update Checker v5.6
+* Tested up to WP 6.9
 
 = 5.7.2 - April 16 2025 =
 

@@ -7,7 +7,7 @@
  *
  * @author   Bootscore
  * @package  bs Grid
- * @version  5.6.1
+ * @version  5.8.1
  *
  * Post/Page/CPT List Shortcodes
  *
@@ -132,7 +132,7 @@ function bootscore_list($atts) {
               <?php if ($atts['excerpt'] == 'true') : ?>
                 <p class="card-text">
                   <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                    <?= strip_tags(get_the_excerpt()); ?>
+                    <?= esc_html(wp_strip_all_tags(get_the_excerpt())); ?>
                   </a>
                 </p>
               <?php endif; ?>

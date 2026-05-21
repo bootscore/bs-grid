@@ -2,8 +2,8 @@
 /*Plugin Name: bs Grid
 Plugin URI: https://bootscore.me/documentation/bs-grid/
 Description: Displays posts from category, child pages from parent id or custom post types by parent taxonomy id in post or page via shortcode.
-Version: 5.8.0
-Tested up to: 6.9
+Version: 5.8.1
+Tested up to: 7.0
 Requires at least: 5.0
 Requires PHP: 7.4
 Author: Bootscore

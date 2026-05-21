@@ -2,8 +2,8 @@
 
 Contributors: Bastian Kreiter, torricelli, Dog Byte Marketing
 
-Stable tag: 5.8.0
-Tested up to: 6.9
+Stable tag: 5.8.1
+Tested up to: 7.0
 Requires at least: 5.0
 Requires PHP: 7.4
 License: MIT License
@@ -110,6 +110,16 @@ tags="false" hide tags badges
 
 
 == Changelog ==
+
+= 5.8.1 - May 21 2026 =
+
+### Bugfix
+
+* Added missing `esc_html` to excerp
+
+### Updates
+
+* Tested up WP 7.0
 
 = 5.8.0 - January 12 2026 =
 
